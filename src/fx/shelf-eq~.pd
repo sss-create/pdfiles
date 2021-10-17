@@ -1,0 +1,84 @@
+#N canvas 0 28 958 1050 12;
+#X obj 298 679 biquad~;
+#X floatatom 219 314 0 0 0 0 - - -;
+#X floatatom 361 292 0 0 0 0 - - -;
+#X obj 361 315 trigger bang float;
+#X obj 222 269 hsl 128 17 20 400 1 0 empty empty frequency 5 9 0 10
+-262144 -1 -1 0 0;
+#X obj 364 269 hsl 128 17 0 100 0 0 empty empty bandwidth 5 9 0 10
+-262144 -1 -1 0 1;
+#X floatatom 555 290 0 0 0 0 - - -;
+#X obj 555 313 trigger bang float;
+#X obj 558 268 hsl 128 17 0 100 0 1 empty empty slope 5 9 0 10 -262144
+-1 -1 1900 0;
+#X floatatom 738 312 0 0 0 0 - - -;
+#X floatatom 880 290 0 0 0 0 - - -;
+#X obj 880 313 trigger bang float;
+#X obj 741 267 hsl 128 17 6000 12000 1 0 empty empty frequency 5 9
+0 10 -262144 -1 -1 0 0;
+#X obj 883 268 hsl 128 17 0 100 0 0 empty empty bandwidth 5 9 0 10
+-262144 -1 -1 0 1;
+#X floatatom 1074 288 0 0 0 0 - - -;
+#X obj 1074 311 trigger bang float;
+#X obj 1077 266 hsl 128 17 0 100 0 1 empty empty slope 5 9 0 10 -262144
+-1 -1 8000 0;
+#X obj 738 614 ~/.local/lib/pd/extra/ggee/highshelf;
+#X obj 299 722 biquad~;
+#X obj 157 134 inlet~;
+#X obj 299 746 outlet~;
+#X obj 219 134 inlet;
+#X obj 273 134 inlet;
+#X obj 327 134 inlet;
+#X obj 381 134 inlet;
+#X obj 435 134 inlet;
+#X obj 489 134 inlet;
+#X obj 543 134 inlet;
+#X obj 597 134 inlet;
+#X text 162 101 0 audio in \, 1 low freq \, 2 low gain \, 3 low q \,
+4 hi freq \, 5 hi gain \, 6 hi q \, 7 filterview low \, 8 filterview
+hi, f 108;
+#X obj 157 158 *~ 0.2;
+#X obj 298 625 ~/.local/lib/pd/extra/ggee/lowshelf;
+#X obj 771 161 loadmess 0;
+#X obj 855 162 loadmess 120;
+#X obj 952 162 loadmess 10000;
+#X connect 0 0 18 0;
+#X connect 1 0 31 0;
+#X connect 2 0 3 0;
+#X connect 3 0 31 0;
+#X connect 3 1 31 1;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 31 0;
+#X connect 7 1 31 2;
+#X connect 8 0 6 0;
+#X connect 9 0 17 0;
+#X connect 10 0 11 0;
+#X connect 11 0 17 0;
+#X connect 11 1 17 1;
+#X connect 12 0 9 0;
+#X connect 13 0 10 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 0;
+#X connect 15 1 17 2;
+#X connect 16 0 14 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 0;
+#X connect 19 0 30 0;
+#X connect 21 0 4 0;
+#X connect 22 0 5 0;
+#X connect 23 0 8 0;
+#X connect 24 0 12 0;
+#X connect 25 0 13 0;
+#X connect 26 0 16 0;
+#X connect 27 0 0 0;
+#X connect 28 0 18 0;
+#X connect 30 0 0 0;
+#X connect 31 0 0 0;
+#X connect 32 0 5 0;
+#X connect 32 0 13 0;
+#X connect 32 0 16 0;
+#X connect 32 0 8 0;
+#X connect 33 0 4 0;
+#X connect 34 0 12 0;
