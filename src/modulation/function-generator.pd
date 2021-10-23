@@ -1,8 +1,8 @@
-#N canvas 0 28 1079 1050 12;
+#N canvas 0 28 1188 1050 12;
 #X obj 75 452 line~;
 #X obj 237 457 line~;
-#X obj 454 205 spigot;
-#X obj 551 205 spigot;
+#X obj 454 206 spigot;
+#X obj 551 206 spigot;
 #X text 156 60 0 trigger fg1 \, 1 attack fg1 \, 2 decay fg1 \, 3 loop
 fg1;
 #X text 78 72 inputs:;
@@ -91,7 +91,7 @@ fg2;
 #X connect 9 0 4 0;
 #X restore 170 226 pd ad;
 #X f 12;
-#X obj 612 205 loadmess 1;
+#X obj 612 206 loadmess 1;
 #N canvas 0 28 824 1050 ad 0;
 #X obj 150 206 inlet;
 #X obj 203 206 inlet;
