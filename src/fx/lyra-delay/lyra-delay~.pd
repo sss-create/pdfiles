@@ -1,4 +1,4 @@
-#N canvas 0 28 729 1050 12;
+#N canvas 0 28 1130 1050 12;
 #X obj 12 492 inlet~;
 #X obj 12 739 outlet~;
 #X obj 167 95 / 127;
@@ -260,13 +260,13 @@
 #X obj 216 962 hradio 19 1 0 2 \$0-s-lfo-wav \$0-r-lfo-wav TRI 0 -8
 0 14 -1 -262144 -1 1;
 #X obj 216 926 hradio 19 1 0 3 \$0-s-del-mod \$0-r-del-mod SELF 0 -7
-0 14 -1 -262144 -1 0;
+0 14 -1 -262144 -1 1;
 #X obj 284 888 hsl 95 19 0 127 0 0 \$0-s-time-2 \$0-r-time-2 TIME-2
-23 -7 0 14 -1 -262144 -1 0 1;
+23 -7 0 14 -1 -262144 -1 2200 1;
 #X obj 219 888 hsl 54 19 0 127 0 0 \$0-s-mod-2 \$0-r-mod-2 MOD-2 6
 -7 0 14 -1 -262144 -1 0 1;
 #X obj 284 852 hsl 95 19 0 127 0 0 \$0-s-time-1 \$0-r-time-1 TIME-1
-23 -8 0 14 -1 -262144 -1 0 1;
+23 -8 0 14 -1 -262144 -1 2700 1;
 #X obj 219 852 hsl 54 19 0 127 0 0 \$0-s-mod-1 \$0-r-mod-1 MOD-1 6
 -7 0 14 -1 -262144 -1 0 1;
 #X obj 263 946 cnv 3 3 24 empty empty empty 20 12 0 14 -1 -66577 0
@@ -274,10 +274,13 @@
 #X obj 255 970 cnv 3 11 3 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 284 962 hsl 95 19 0 127 0 0 \$0-s-del-mix \$0-r-del-mix MIX
-35 -7 0 14 -1 -262144 -1 0 1;
+35 -7 0 14 -1 -262144 -1 4600 1;
 #X obj 284 926 hsl 95 19 0 127 0 0 \$0-s-feedback \$0-r-feedback FEEDBACK
-16 -7 0 14 -1 -262144 -1 0 1;
+16 -7 0 14 -1 -262144 -1 6800 1;
 #X text 146 865 use:;
+#X floatatom 59 545 5 0 0 0 - - -;
+#X floatatom 845 64 5 0 0 0 - - -;
+#X floatatom 353 295 5 0 0 0 - - -;
 #X connect 0 0 17 0;
 #X connect 0 0 86 0;
 #X connect 2 0 10 0;
@@ -416,3 +419,7 @@
 #X connect 119 0 83 1;
 #X connect 120 0 119 0;
 #X connect 121 0 118 0;
+#X connect 134 0 88 0;
+#X connect 135 0 52 0;
+#X connect 135 0 2 0;
+#X connect 136 0 20 0;

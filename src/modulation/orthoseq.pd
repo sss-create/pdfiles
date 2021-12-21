@@ -1,27 +1,27 @@
 #N canvas 0 28 1130 1050 12;
-#X floatatom 26 -811 5 0 0 0 - - -;
-#X text 66 -811 step 0-99;
-#X obj 26 -837 counter, f 13;
-#X obj 419 -619 sel 1;
-#X msg 70 -864 bang;
-#X obj 106 -744 tabread note;
-#X floatatom 262 -682 5 0 0 0 - - -;
-#X floatatom 263 -660 5 0 0 0 - - -;
-#X floatatom 263 -638 5 0 0 0 - - -;
-#X obj 419 -593 outlet;
-#X obj 369 -641 outlet;
-#X obj 26 -887 inlet;
-#X msg 121 -864 min \$1;
-#X msg 182 -864 max \$1;
-#X obj 121 -887 inlet;
-#X obj 182 -887 inlet;
-#X obj 70 -887 inlet;
-#X text 24 -908 clock;
-#X text 69 -907 reset;
-#X text 120 -908 min;
-#X text 181 -906 max;
-#X obj 105 -721 tabread duration;
-#X obj 105 -699 tabread gate;
+#X floatatom 169 134 5 0 0 0 - - -;
+#X text 209 134 step 0-99;
+#X obj 169 108 counter, f 13;
+#X obj 562 326 sel 1;
+#X msg 213 81 bang;
+#X obj 249 201 tabread note;
+#X floatatom 405 263 5 0 0 0 - - -;
+#X floatatom 406 285 5 0 0 0 - - -;
+#X floatatom 406 307 5 0 0 0 - - -;
+#X obj 562 352 outlet;
+#X obj 512 304 outlet;
+#X obj 169 58 inlet;
+#X msg 44 58 min \$1;
+#X msg 105 58 max \$1;
+#X obj 44 35 inlet;
+#X obj 105 35 inlet;
+#X obj 213 58 inlet;
+#X text 167 37 clock;
+#X text 212 38 reset;
+#X text 43 14 min;
+#X text 104 16 max;
+#X obj 248 224 tabread duration;
+#X obj 248 246 tabread gate;
 #N canvas 0 28 1015 1050 arrays 0;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array gate 99 float 3;
@@ -41,15 +41,16 @@
 #X restore 436 -701 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array duration 127 float 3;
-#A 0 10 2 4 0 2 0.5 0.25 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#A 0 1 0.5 1 0.25 2 0.5 0.25 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0;
 #X coords 0 1 127 -1 200 140 1 0 0;
 #X restore 436 -373 graph;
-#X restore 25 -699 pd arrays;
-#X obj 26 -726 outlet;
-#X obj 321 -664 outlet;
+#X restore 168 246 pd arrays;
+#X obj 169 219 outlet;
+#X obj 464 281 outlet;
 #X connect 0 0 5 0;
 #X connect 0 0 21 0;
 #X connect 0 0 22 0;
