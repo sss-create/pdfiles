@@ -1,12 +1,12 @@
-#N canvas 0 28 900 1050 12;
-#X obj 607 297 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+#N canvas 0 0 1920 1052 12;
+#X obj 607 297 hradio 15 1 0 5 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 607 318 zl lookup;
-#X obj 387 377 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+#X obj 387 377 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 387 398 zl lookup;
-#X obj 607 377 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+#X obj 607 377 hradio 15 1 0 4 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X obj 607 398 zl lookup;
 #X obj 24 26 inlet~;
 #N canvas 0 28 958 1050 peak 0;
@@ -71,16 +71,16 @@
 #X obj 216 492 outlet~;
 #X obj 216 467 *~;
 #X obj 233 251 rampsmooth~;
-#X obj 387 296 hradio 15 1 0 6 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+#X obj 387 296 hradio 15 1 0 6 empty empty empty 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
 #X msg 387 342 attack \$1;
 #X obj 387 316 zl lookup;
-#X obj 437 459 hsl 128 15 -30 0 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 386 457 5 0 0 0 - - -;
+#X obj 437 459 hsl 128 15 -30 0 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 386 457 5 0 0 0 - - - 0;
 #X msg 434 479 threshold \$1;
-#X obj 576 459 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 576 459 hsl 128 15 0 20 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X msg 573 479 makeup \$1;
 #X text 514 12 https://designingsound.org/2013/06/28/tutorial-a-compressor-in-pure-data/#
 ;
@@ -97,7 +97,9 @@
 #X obj 291 305 - 100;
 #X obj 291 330 outlet;
 #X text 267 330 GR;
-#X obj 386 658 vu 100 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 386 658 vu 100 120 empty empty -1 -8 0 10 #404040 #000000 1
+0;
+#X obj 232 143 hip~ 120;
 #X connect 0 0 1 0;
 #X connect 1 0 30 0;
 #X connect 2 0 3 0;
@@ -105,7 +107,7 @@
 #X connect 4 0 5 0;
 #X connect 5 0 29 0;
 #X connect 6 0 8 0;
-#X connect 6 0 7 0;
+#X connect 6 0 55 0;
 #X connect 7 0 11 0;
 #X connect 8 0 9 0;
 #X connect 9 0 14 0;
@@ -142,3 +144,4 @@
 #X connect 48 0 3 1;
 #X connect 50 0 51 0;
 #X connect 51 0 52 0;
+#X connect 55 0 7 0;

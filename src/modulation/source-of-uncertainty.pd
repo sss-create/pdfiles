@@ -1,4 +1,4 @@
-#N canvas 0 28 1188 1050 12;
+#N canvas 0 0 958 1050 12;
 #X obj 261 378 samphold~;
 #X obj 320 332 phasor~;
 #X obj 96 87 noise~;
@@ -25,7 +25,6 @@
 #X text 158 552 -1 to 1;
 #X text 358 377 -1 to 1;
 #X obj 96 113 cyclone/snapshot~ 10;
-#X obj 23 579 cyclone/snapshot~ 10;
 #X obj 261 402 cyclone/snapshot~ 10;
 #X obj 23 690 outlet;
 #X obj 497 596 inlet;
@@ -35,7 +34,12 @@
 #X obj 708 388 inlet;
 #X obj 261 436 scale -1 1 30 500, f 29;
 #X obj 23 665 scale -1 1 30 500, f 29;
-#X connect 0 0 26 0;
+#X floatatom 83 690 5 0 0 0 - - - 0;
+#X obj 132 282 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 175 398 5 0 0 0 - - - 0;
+#X obj 24 578 snapshot~;
+#X connect 0 0 25 0;
 #X connect 1 0 0 1;
 #X connect 2 0 24 0;
 #X connect 3 0 6 0;
@@ -51,16 +55,19 @@
 #X connect 14 0 9 1;
 #X connect 15 0 3 0;
 #X connect 15 0 4 0;
-#X connect 17 0 25 0;
+#X connect 17 0 37 0;
 #X connect 18 0 1 0;
 #X connect 19 0 11 0;
 #X connect 24 0 15 1;
-#X connect 25 0 34 0;
-#X connect 26 0 33 0;
-#X connect 28 0 34 3;
-#X connect 29 0 34 4;
-#X connect 31 0 33 3;
-#X connect 32 0 33 4;
-#X connect 33 0 30 0;
-#X connect 34 0 27 0;
+#X connect 25 0 32 0;
+#X connect 27 0 33 3;
+#X connect 28 0 33 4;
+#X connect 30 0 32 3;
+#X connect 31 0 32 4;
+#X connect 32 0 29 0;
+#X connect 33 0 26 0;
+#X connect 33 0 34 0;
+#X connect 35 0 37 0;
+#X connect 36 0 11 0;
+#X connect 37 0 33 0;
 #X coords 0 1050 1 1049 160 90 0;

@@ -1,10 +1,9 @@
-#N canvas 0 28 1130 1050 12;
+#N canvas 0 28 1131 1050 12;
 #X floatatom 169 134 5 0 0 0 - - -;
 #X text 209 134 step 0-99;
 #X obj 169 108 counter, f 13;
 #X obj 562 326 sel 1;
 #X msg 213 81 bang;
-#X obj 249 201 tabread note;
 #X floatatom 405 263 5 0 0 0 - - -;
 #X floatatom 406 285 5 0 0 0 - - -;
 #X floatatom 406 307 5 0 0 0 - - -;
@@ -20,53 +19,102 @@
 #X text 212 38 reset;
 #X text 43 14 min;
 #X text 104 16 max;
-#X obj 248 224 tabread duration;
-#X obj 248 246 tabread gate;
-#N canvas 0 28 1015 1050 arrays 0;
+#N canvas 0 28 1920 1052 arrays 0;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array gate 99 float 3;
-#A 0 6 0 1 0 1 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#X array \$0-gate 99 float 3;
+#A 0 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 ;
-#X coords 0 1 99 -1 200 140 1;
+#X coords 0 1 99 -1 200 140 1 0 0;
 #X restore 436 -537 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array note 99 float 3;
-#A 0 16 2 46 0 50 58 50 58 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 -0.0285715 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#X array \$0-note 99 float 3;
+#A 0 16 89 46 0 50 58 50 58 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 -0.0285715 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0;
+0 0 0 0 0 0 0 0 0;
 #X coords 0 1 99 -1 200 140 1 0 0;
 #X restore 436 -701 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array duration 127 float 3;
-#A 0 1 0.5 1 0.25 2 0.5 0.25 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#X array \$0-duration 127 float 3;
+#A 0 2 4.25 0.25 0.5 0.25 0.5 0.25 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0;
+0 0 0 0;
 #X coords 0 1 127 -1 200 140 1 0 0;
 #X restore 436 -373 graph;
 #X restore 168 246 pd arrays;
 #X obj 169 219 outlet;
 #X obj 464 281 outlet;
-#X connect 0 0 5 0;
-#X connect 0 0 21 0;
-#X connect 0 0 22 0;
-#X connect 0 0 24 0;
-#X connect 2 0 0 0;
-#X connect 3 0 9 0;
-#X connect 4 0 2 2;
+#X obj 249 201 tabread \$0-note;
+#X obj 248 224 tabread \$0-duration;
+#X obj 248 246 tabread \$0-gate;
+#X floatatom 664 163 5 0 0 1 note - -;
+#X floatatom 664 185 5 0 0 1 duration - -;
+#X floatatom 664 142 5 0 0 1 step - -;
+#N canvas 0 28 1131 1050 orthoseq-write 0;
+#X obj 38 39 inlet;
+#X obj 176 39 inlet;
+#X obj 343 38 inlet;
+#X obj 431 37 inlet;
+#X obj 38 156 tabwrite \$0-note;
+#X obj 176 156 tabwrite \$0-duration;
+#X obj 343 156 tabwrite \$0-gate;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 1;
+#X connect 3 0 5 1;
+#X connect 3 0 6 1;
+#X restore 521 225 pd orthoseq-write;
+#X floatatom 664 206 5 0 0 1 gate - -;
+#N canvas 0 28 1131 1050 orthoseq-read 0;
+#X obj 55 42 inlet;
+#X msg 55 133 set \$1;
+#X obj 55 158 outlet;
+#X msg 173 133 set \$1;
+#X obj 173 158 outlet;
+#X msg 320 133 set \$1;
+#X obj 320 158 outlet;
+#X obj 55 108 tabread \$0-note;
+#X obj 173 109 tabread \$0-duration;
+#X obj 320 109 tabread \$0-gate;
+#X connect 0 0 7 0;
+#X connect 0 0 8 0;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
 #X connect 5 0 6 0;
-#X connect 6 0 25 0;
-#X connect 7 0 10 0;
+#X connect 7 0 1 0;
 #X connect 8 0 3 0;
+#X connect 9 0 5 0;
+#X restore 395 225 pd orthoseq-read;
+#X connect 0 0 21 0;
+#X connect 0 0 23 0;
+#X connect 0 0 24 0;
+#X connect 0 0 25 0;
+#X connect 2 0 0 0;
+#X connect 3 0 8 0;
+#X connect 4 0 2 2;
+#X connect 5 0 22 0;
+#X connect 6 0 9 0;
+#X connect 7 0 3 0;
+#X connect 10 0 2 0;
 #X connect 11 0 2 0;
 #X connect 12 0 2 0;
-#X connect 13 0 2 0;
+#X connect 13 0 11 0;
 #X connect 14 0 12 0;
-#X connect 15 0 13 0;
-#X connect 16 0 4 0;
-#X connect 21 0 7 0;
-#X connect 22 0 8 0;
+#X connect 15 0 4 0;
+#X connect 23 0 5 0;
+#X connect 24 0 6 0;
+#X connect 25 0 7 0;
+#X connect 26 0 29 0;
+#X connect 27 0 29 1;
+#X connect 28 0 31 0;
+#X connect 28 0 29 3;
+#X connect 30 0 29 2;
+#X connect 31 0 26 0;
+#X connect 31 1 27 0;
+#X connect 31 2 30 0;
