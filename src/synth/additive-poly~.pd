@@ -855,17 +855,17 @@
 #X restore 38 370 graph;
 #X obj 282 232 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 798 502 degrade~;
-#X obj 827 463 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#X obj 798 582 degrade~;
+#X obj 897 543 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 854 482 hsl 128 15 0 24 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#X obj 924 562 hsl 128 15 0 24 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X obj 760 290 mtof;
 #X obj 760 315 osc~;
 #X obj 760 340 *~ 1;
-#X obj 797 529 hip~ 30;
+#X obj 797 609 hip~ 30;
 #X obj 797 42 inlet;
-#X obj 798 596 outlet~;
+#X obj 798 676 outlet~;
 #X msg 282 276 \; wavetable1 sinesum 2051 1 \$1 \$2 \$3 \$4 \$5 \$6
 \$7 \$8 \$9 \$10 \$11 \$12 \$13 \$14 \$15 \$16 \; \; wavetable1 normalize
 1 \;;
@@ -1095,9 +1095,9 @@
 #X obj 324 25 inlet;
 #X obj 276 25 inlet;
 #X obj 371 24 inlet;
-#X obj 527 546 random 10;
-#X obj 527 571 * 0.1;
-#X obj 614 532 random 24;
+#X obj 851 498 random 10;
+#X obj 851 523 * 0.1;
+#X obj 824 461 random 24;
 #X connect 3 0 14 0;
 #X connect 3 0 35 0;
 #X connect 4 0 10 0;
@@ -1131,5 +1131,5 @@
 #X connect 31 0 18 0;
 #X connect 32 0 15 0;
 #X connect 33 0 34 0;
-#X connect 34 0 5 0;
-#X connect 35 0 6 0;
+#X connect 34 0 4 2;
+#X connect 35 0 4 1;
