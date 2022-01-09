@@ -1,4 +1,4 @@
-#N canvas 0 28 900 1050 12;
+#N canvas 0 0 958 1050 12;
 #X obj 46 195 biquad~;
 #X obj 381 345 ~/.local/lib/pd/extra/ggee/highshelf;
 #X obj 46 365 biquad~;
@@ -24,6 +24,26 @@
 #X obj 317 123 t b f;
 #X obj 679 302 pack 10000 0 0;
 #X obj 398 133 pack 120 0 0;
+#X obj 1066 87 vsl 15 128 30 120 0 0 empty empty lo_freq 0 -9 0 10
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 1066 223 5 0 0 0 - - - 0;
+#X obj 1118 87 vsl 15 128 -20 20 0 0 empty empty lo_gain 0 -9 0 10
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 1118 223 5 0 0 0 - - - 0;
+#X obj 1170 87 vsl 15 128 0.1 100 0 0 empty empty low_q 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 1170 223 5 0 0 0 - - - 0;
+#X obj 1222 87 vsl 15 128 8000 14000 0 0 empty empty hi_freq 0 -9 0
+10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 1222 223 6 0 0 0 - - - 0;
+#X obj 1274 87 vsl 15 128 -20 20 0 0 empty empty hi_gain 0 -9 0 10
+#fcfcfc #000000 #000000 0 1;
+#X floatatom 1274 224 5 0 0 0 - - - 0;
+#X obj 1326 87 vsl 15 128 0.1 100 0 0 empty empty hi_q 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 1326 223 5 0 0 0 - - - 0;
+#X text 947 176 for inlet use:;
+#X text 926 196 (need connection);
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
@@ -54,3 +74,9 @@
 #X connect 21 1 12 2;
 #X connect 22 0 16 0;
 #X connect 23 0 17 0;
+#X connect 24 0 25 0;
+#X connect 26 0 27 0;
+#X connect 28 0 29 0;
+#X connect 30 0 31 0;
+#X connect 32 0 33 0;
+#X connect 34 0 35 0;
