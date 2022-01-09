@@ -1,4 +1,4 @@
-#N canvas 0 0 1022 1050 12;
+#N canvas 0 0 1920 1052 12;
 #X floatatom 189 99 5 0 0 0 - - - 0;
 #X obj 47 120 *~ 0.1;
 #X obj 64 209 cos~;
@@ -28,7 +28,7 @@
 #X obj 48 74 inlet~;
 #X obj 189 74 inlet;
 #X obj 292 74 inlet;
-#X text 47 10 inlets: 0 audio \; 1 lfo speed \; 2 feedback;
+#X text 47 10 0 audio \; 1 lfo speed \; 2 feedback;
 #X connect 0 0 13 0;
 #X connect 1 0 5 0;
 #X connect 1 0 6 0;

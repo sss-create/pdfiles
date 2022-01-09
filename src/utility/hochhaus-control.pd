@@ -1,20 +1,20 @@
-#N canvas 0 0 1270 1050 12;
-#X obj 54 517 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#N canvas 0 0 1920 1052 12;
+#X obj 75 747 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X msg 71 459 connect 127.0.0.1 9001;
-#X text 23 433 OSC;
-#X obj 54 432 mrpeach/packOSC;
-#X obj 54 490 mrpeach/udpsend;
-#X msg 237 460 disconnect;
-#X obj 54 409 r osc;
-#X msg 55 622 seed 2;
-#X floatatom 55 673 5 0 0 0 - - - 0;
-#X obj 55 540 i;
-#X obj 55 590 sel 0;
-#X obj 86 540 + 1;
-#X obj 55 565 mod 4;
-#X obj 55 648 random;
-#X obj 108 -50 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X msg 92 689 connect 127.0.0.1 9001;
+#X text 44 663 OSC;
+#X obj 75 662 mrpeach/packOSC;
+#X obj 75 720 mrpeach/udpsend;
+#X msg 258 690 disconnect;
+#X obj 75 639 r osc;
+#X msg 76 852 seed 2;
+#X floatatom 76 903 5 0 0 0 - - - 0;
+#X obj 76 770 i;
+#X obj 76 820 sel 0;
+#X obj 107 770 + 1;
+#X obj 76 795 mod 4;
+#X obj 76 878 random;
+#X obj 129 180 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #N canvas 0 0 1920 1052 simultaneous-black 0;
 #X msg 362 644 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
@@ -45,8 +45,8 @@
 #X connect 9 0 1 4;
 #X connect 10 0 4 0;
 #X connect 11 0 6 0;
-#X restore 328 463 pd simultaneous-black;
-#X obj 328 438 bng 15 250 50 0 empty empty empty 17 7 0 10 #ffffff
+#X restore 349 693 pd simultaneous-black;
+#X obj 349 668 bng 15 250 50 0 empty empty empty 17 7 0 10 #ffffff
 #000000 #000000;
 #N canvas 1393 639 525 411 simultaneous-colour 0;
 #X msg 214 675 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
@@ -85,12 +85,12 @@
 #X connect 14 0 15 0;
 #X connect 15 0 5 0;
 #X connect 15 0 4 0;
-#X restore 23 326 pd simultaneous-colour;
-#X obj 73 289 unpack f f f;
-#X obj 23 -7 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
-0 1;
-#X obj 184 155 unpack f f f;
-#X msg 184 130 200 200 90;
+#X restore 44 556 pd simultaneous-colour;
+#X obj 94 519 unpack f f f;
+#X obj 44 223 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 205 385 unpack f f f;
+#X msg 205 360 200 200 90;
 #N canvas 0 0 1140 1050 up 0;
 #X msg 101 404 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
 #X obj 101 379 pack f f f f f, f 27;
@@ -145,14 +145,14 @@
 #X connect 18 0 1 0;
 #X connect 19 0 18 1;
 #X connect 21 2 18 0;
-#X restore 23 182 pd up;
+#X restore 44 412 pd up;
 #X f 35;
-#X floatatom 86 149 5 0 0 0 - - - 0;
-#X floatatom 133 151 5 0 0 0 - - - 0;
-#X obj 437 156 unpack f f f;
-#X msg 437 131 200 200 90;
-#X floatatom 339 150 5 0 0 0 - - - 0;
-#X floatatom 386 152 5 0 0 0 - - - 0;
+#X floatatom 107 379 5 0 0 0 - - - 0;
+#X floatatom 154 381 5 0 0 0 - - - 0;
+#X obj 458 386 unpack f f f;
+#X msg 458 361 200 200 90;
+#X floatatom 360 380 5 0 0 0 - - - 0;
+#X floatatom 407 382 5 0 0 0 - - - 0;
 #N canvas 0 0 1140 1050 down 0;
 #X msg 101 404 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
 #X obj 101 379 pack f f f f f, f 27;
@@ -204,9 +204,9 @@
 #X connect 17 0 1 0;
 #X connect 18 0 17 1;
 #X connect 20 2 17 0;
-#X restore 276 183 pd down;
+#X restore 297 413 pd down;
 #X f 35;
-#N canvas 0 0 865 1050 2colour-drunk 0;
+#N canvas 0 0 1920 1052 2colour-drunk 0;
 #X msg 1206 396 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
 #X obj 1206 323 pack f f f f f, f 27;
 #X msg 1299 294 255;
@@ -246,18 +246,18 @@
 #X connect 15 0 4 0;
 #X connect 15 0 2 0;
 #X connect 15 0 10 0;
-#X restore 120 674 pd 2colour-drunk;
-#X obj 120 622 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X restore 1100 411 pd 2colour-drunk;
+#X obj 1100 359 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 120 646 metro 50;
-#N canvas 0 0 865 1050 markov 0;
-#X restore 422 326 pd markov;
-#N canvas 0 0 1140 1050 blocks 0;
-#X restore 350 327 pd blocks;
-#X obj 524 255 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 1100 383 metro 50;
+#N canvas 0 0 1920 1052 markov 0;
+#X restore 443 556 pd markov;
+#N canvas 0 0 1920 1052 blocks 0;
+#X restore 371 557 pd blocks;
+#X obj 545 485 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 685 299 unpack f f f;
-#X msg 685 274 200 200 90;
+#X obj 706 529 unpack f f f;
+#X msg 706 504 200 200 90;
 #N canvas 0 0 649 1050 left 0;
 #X msg 101 404 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
 #X obj 101 379 pack f f f f f, f 27;
@@ -306,11 +306,11 @@
 #X connect 16 0 1 0;
 #X connect 17 2 16 0;
 #X connect 18 0 16 2;
-#X restore 524 326 pd left;
+#X restore 545 556 pd left;
 #X f 35;
-#X obj 524 281 metro 100;
-#X obj 706 153 unpack f f f;
-#X msg 706 128 200 200 90;
+#X obj 545 511 metro 100;
+#X obj 727 383 unpack f f f;
+#X msg 727 358 200 200 90;
 #N canvas 0 0 958 1050 up 0;
 #X msg 101 404 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
 #X obj 101 379 pack f f f f f, f 27;
@@ -365,14 +365,14 @@
 #X connect 18 0 1 0;
 #X connect 19 0 18 1;
 #X connect 21 2 18 0;
-#X restore 545 180 pd up;
+#X restore 566 410 pd up;
 #X f 35;
-#X floatatom 608 147 5 0 0 0 - - - 0;
-#X floatatom 655 149 5 0 0 0 - - - 0;
-#X obj 959 154 unpack f f f;
-#X msg 959 129 200 200 90;
-#X floatatom 861 148 5 0 0 0 - - - 0;
-#X floatatom 908 150 5 0 0 0 - - - 0;
+#X floatatom 629 377 5 0 0 0 - - - 0;
+#X floatatom 676 379 5 0 0 0 - - - 0;
+#X obj 980 384 unpack f f f;
+#X msg 980 359 200 200 90;
+#X floatatom 882 378 5 0 0 0 - - - 0;
+#X floatatom 929 380 5 0 0 0 - - - 0;
 #N canvas 0 0 958 1050 down 0;
 #X msg 101 404 /lighthouse/lightx\$1y\$2 \$3 \$4 \$5;
 #X obj 101 379 pack f f f f f, f 27;
@@ -424,9 +424,9 @@
 #X connect 17 0 1 0;
 #X connect 18 0 17 1;
 #X connect 20 2 17 0;
-#X restore 798 181 pd down;
+#X restore 819 411 pd down;
 #X f 35;
-#N canvas 0 0 1140 1050 random-rgb 0;
+#N canvas 0 0 1920 1052 random-rgb 0;
 #X obj 352 186 random 255;
 #X obj 432 186 random 255;
 #X obj 512 186 random 255;
@@ -440,8 +440,8 @@
 #X connect 3 0 1 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
-#X restore 251 327 pd random-rgb;
-#X floatatom 144 240 5 0 0 0 - - - 0;
+#X restore 272 557 pd random-rgb;
+#X floatatom 165 470 5 0 0 0 - - - 0;
 #N canvas 0 0 1140 1050 palettes 0;
 #X obj 197 296 coll;
 #X f 17;
@@ -505,8 +505,8 @@
 #X connect 25 0 0 0;
 #X connect 26 0 0 0;
 #X connect 27 0 0 0;
-#X restore 144 264 pd palettes;
-#X obj 108 -33 random 5;
+#X restore 165 494 pd palettes;
+#X obj 129 197 random 5;
 #N canvas 0 0 1140 1050 palettes 0;
 #X obj 197 296 coll;
 #X f 17;
@@ -523,9 +523,9 @@
 #X connect 3 0 0 0;
 #X connect 4 0 0 0;
 #X connect 5 0 3 0;
-#X restore 108 -7 pd palettes;
-#X msg 73 264 255 255 255;
-#X obj 23 -40 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X restore 129 223 pd palettes;
+#X msg 94 494 255 255 255;
+#X obj 44 190 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #N canvas 0 0 1140 1050 palette-shift 0;
 #X obj 551 259 bucket 4;
@@ -561,8 +561,13 @@
 #X connect 6 0 11 0;
 #X connect 7 0 12 0;
 #X connect 8 0 1 0;
-#X restore 108 27 pd palette-shift;
-#X obj 23 19 metro 500;
+#X restore 129 257 pd palette-shift;
+#X obj 44 249 metro 500;
+#X obj 1153 349 inlet;
+#X obj 1100 326 inlet;
+#X obj 42 137 inlet;
+#X obj 112 137 inlet;
+#X obj 182 137 inlet;
 #X connect 1 0 4 0;
 #X connect 3 0 4 0;
 #X connect 4 0 0 0;
@@ -627,3 +632,5 @@
 #X connect 58 0 29 0;
 #X connect 58 0 42 0;
 #X connect 58 0 49 0;
+#X connect 59 0 32 1;
+#X connect 60 0 31 0;

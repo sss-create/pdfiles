@@ -1,4 +1,4 @@
-#N canvas 969 0 949 638 12;
+#N canvas 0 0 1203 1050 12;
 #X obj 302 330 f;
 #X obj 302 355 % 16;
 #X obj 302 549 + 0;
@@ -31,6 +31,7 @@
 #X obj 362 241 expr 0.5*(60000/$f1);
 #X obj 590 212 inlet;
 #X obj 302 674 outlet;
+#X text 162 112 0 on/off \; 1 bpm \; 2 trig number;
 #X connect 0 0 1 0;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
