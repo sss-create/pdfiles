@@ -1,4 +1,4 @@
-#N canvas 0 0 1140 1050 12;
+#N canvas 0 0 1475 1050 12;
 #X obj 1204 286 tgl 30 0 empty empty fm 17 7 0 10 #fcfcfc #000000 #000000
 0 1;
 #X obj 1161 237 hsl 128 30 -1000 1000 0 0 empty empty +-index -2 -8
@@ -656,11 +656,6 @@
 #X text 1025 787 unmute!;
 #X text 107 18 load preset 0;
 #X obj 262 64 text get presets-kick;
-#X obj 960 876 text define -k probabilities;
-#A set 100 0 30 10 40 20 20 9 kick \; 70 40 65 80 20 30 69 40 hat1
-\; 40 70 65 80 20 30 69 40 hat2 \; 0 10 10 5 100 10 10 5 clap \; 0
-5 10 20 0 0 30 15 snare \;;
-#X f 30;
 #X obj 977 614 fx/state-bandpass~, f 50;
 #X obj 1566 204 clone synth/classic-poly~ 8;
 #N canvas 0 0 1140 1050 random-glitches 0;
@@ -830,9 +825,14 @@
 #X connect 62 0 23 0;
 #X connect 64 0 11 0;
 #X connect 65 0 11 1;
-#X connect 66 0 11 3;
 #X connect 66 0 16 0;
+#X connect 66 0 11 3;
 #X restore 755 585 pd random-glitches;
+#X obj 960 876 text define -k probability;
+#A set 100 10 0 20 0 60 10 5 kick \; 70 30 75 40 60 80 70 42 hat \;
+30 70 25 60 40 20 30 56 hat2 \; 0 20 12 20 60 10 20 12 clap \; 0 5
+10 20 0 0 30 15 snare \;;
+#X f 30;
 #X connect 0 0 17 5;
 #X connect 1 0 28 0;
 #X connect 1 0 17 4;
@@ -850,7 +850,7 @@
 #X connect 13 0 21 1;
 #X connect 14 0 21 2;
 #X connect 15 0 16 0;
-#X connect 16 0 291 0;
+#X connect 16 0 290 0;
 #X connect 17 0 15 0;
 #X connect 18 0 23 0;
 #X connect 19 0 17 1;
@@ -865,10 +865,10 @@
 #X connect 26 0 77 0;
 #X connect 27 0 78 0;
 #X connect 30 0 86 0;
-#X connect 30 0 291 1;
-#X connect 31 0 291 2;
-#X connect 32 0 291 3;
-#X connect 33 0 291 4;
+#X connect 30 0 290 1;
+#X connect 31 0 290 2;
+#X connect 32 0 290 3;
+#X connect 33 0 290 4;
 #X connect 34 0 141 0;
 #X connect 35 0 118 0;
 #X connect 36 0 34 1;
@@ -963,6 +963,7 @@
 #X connect 124 0 127 0;
 #X connect 125 0 124 1;
 #X connect 126 0 124 2;
+#X connect 127 0 167 0;
 #X connect 128 0 114 3;
 #X connect 129 0 1 0;
 #X connect 132 0 133 0;
@@ -1032,7 +1033,7 @@
 #X connect 165 4 164 0;
 #X connect 165 5 162 0;
 #X connect 166 0 165 0;
-#X connect 173 0 292 0;
+#X connect 173 0 291 0;
 #X connect 174 0 283 1;
 #X connect 175 0 173 0;
 #X connect 176 0 173 0;
@@ -1086,9 +1087,9 @@
 #X connect 211 0 213 0;
 #X connect 212 0 211 0;
 #X connect 214 0 210 0;
-#X connect 214 0 293 0;
+#X connect 214 0 292 0;
 #X connect 215 0 210 1;
-#X connect 215 0 293 1;
+#X connect 215 0 292 1;
 #X connect 225 0 224 4;
 #X connect 226 0 224 3;
 #X connect 227 0 224 2;
@@ -1169,8 +1170,8 @@
 #X connect 285 0 169 0;
 #X connect 286 0 285 1;
 #X connect 289 0 135 0;
-#X connect 291 0 18 0;
-#X connect 291 1 30 0;
-#X connect 291 2 32 0;
-#X connect 292 0 283 0;
-#X connect 293 0 211 2;
+#X connect 290 0 18 0;
+#X connect 290 1 30 0;
+#X connect 290 2 32 0;
+#X connect 291 0 283 0;
+#X connect 292 0 211 2;

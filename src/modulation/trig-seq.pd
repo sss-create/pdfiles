@@ -1,4 +1,4 @@
-#N canvas 0 0 1920 1052 12;
+#N canvas 0 0 1413 1050 12;
 #X obj 148 190 counter 7, f 67;
 #X obj 148 595 sel 0;
 #X obj 277 595 sel 1;
@@ -108,10 +108,10 @@
 #X obj 1302 599 unpack f f f f f f f f s;
 #X obj 1302 79 inlet;
 #X floatatom 1302 108 5 0 0 0 - - - 0;
-#X obj 1302 515 text get probabilities;
 #X obj 1312 540 print;
 #X text 24 48 0 play \; 1 bpm \; 2 step clock \; 3 pattern shift \;
 4 probabilities;
+#X obj 1302 515 text get probability;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 0 0 8 0;
@@ -216,6 +216,6 @@
 #X connect 89 6 62 1;
 #X connect 89 7 63 1;
 #X connect 90 0 91 0;
-#X connect 91 0 92 0;
-#X connect 92 0 89 0;
-#X connect 92 0 93 0;
+#X connect 91 0 94 0;
+#X connect 94 0 89 0;
+#X connect 94 0 92 0;

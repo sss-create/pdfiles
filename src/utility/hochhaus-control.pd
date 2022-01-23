@@ -1,11 +1,11 @@
-#N canvas 0 0 1270 1050 12;
-#X obj 67 624 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#N canvas 0 0 1016 1050 12;
+#X obj 67 684 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X msg 84 566 connect 127.0.0.1 9001;
+#X msg 84 626 connect 127.0.0.1 9001;
 #X text 36 540 OSC;
 #X obj 67 539 mrpeach/packOSC;
-#X obj 67 597 mrpeach/udpsend;
-#X msg 250 567 disconnect;
+#X obj 67 657 mrpeach/udpsend;
+#X msg 250 627 disconnect;
 #X obj 67 516 r osc;
 #X obj 423 219 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -526,11 +526,14 @@
 #000000 0 1;
 #X text 361 24 interaction!;
 #X text 659 69 interaction!;
-#X msg 183 598 connect 149.222.206.21 9001;
+#X msg 183 658 connect 149.222.206.21 9001;
 #X msg 167 276 \$1;
 #X floatatom 167 301 5 0 0 0 - - - 0;
+#X obj 67 589 spigot;
+#X obj 104 572 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X connect 1 0 4 0;
-#X connect 3 0 4 0;
+#X connect 3 0 78 0;
 #X connect 4 0 0 0;
 #X connect 5 0 4 0;
 #X connect 6 0 3 0;
@@ -627,3 +630,5 @@
 #X connect 75 0 4 0;
 #X connect 76 0 77 0;
 #X connect 77 0 57 1;
+#X connect 78 0 4 0;
+#X connect 79 0 78 1;
