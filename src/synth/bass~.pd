@@ -17,6 +17,7 @@
 #X obj 334 724 hip~ 60;
 #X obj 332 641 svf~ 500 0;
 #X obj 334 699 svf~ 200 0;
+#X text 456 303 0 freq \; 1 gate \;;
 #X connect 0 0 3 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;

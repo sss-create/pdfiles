@@ -1,4 +1,4 @@
-#N canvas 0 0 1362 1050 12;
+#N canvas 0 0 1028 1050 12;
 #X obj 700 75 pink~;
 #X obj 757 74 noise~;
 #X obj 700 221 *~;
@@ -406,18 +406,17 @@
 #X obj 1230 61 inlet;
 #X obj 1512 63 inlet;
 #X obj 1562 63 inlet;
-#X text 66 17 0 trig \, 1 repeat \, 2 decay \, 3 mix \, 4 hi-freq \,
-5 hi vol \, 6 low freq \, 7 low vol \, 8 vcf freq \, 9 vcf q, f 117
-;
 #X obj 700 291 *~ 1;
-#X floatatom 545 212 5 0 0 0 - - - 0;
 #X obj 701 762 outlet~;
 #X obj 701 736 hip~ 120;
 #X obj 701 707 hip~ 120;
+#X text 31 184 0 trig \; 1 repeat \; 2 decay \; 3 mix \; 4 hi-freq
+\; 5 hi vol \; 6 low freq \; 7 low vol \; 8 vcf freq \; 9 vcf q \;
+;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
-#X connect 2 0 57 0;
-#X connect 3 0 57 0;
+#X connect 2 0 56 0;
+#X connect 3 0 56 0;
 #X connect 4 0 7 0;
 #X connect 4 0 8 0;
 #X connect 5 0 3 1;
@@ -430,7 +429,7 @@
 #X connect 10 0 19 0;
 #X connect 11 0 15 0;
 #X connect 11 0 21 0;
-#X connect 12 0 61 0;
+#X connect 12 0 59 0;
 #X connect 13 0 16 0;
 #X connect 13 0 19 1;
 #X connect 13 0 20 1;
@@ -449,7 +448,7 @@
 #X connect 22 0 12 1;
 #X connect 25 0 16 0;
 #X connect 25 1 16 1;
-#X connect 26 0 58 0;
+#X connect 26 0 25 0;
 #X connect 30 0 12 0;
 #X connect 31 0 30 1;
 #X connect 32 0 33 0;
@@ -474,7 +473,6 @@
 #X connect 53 0 32 0;
 #X connect 54 0 39 0;
 #X connect 55 0 18 0;
-#X connect 57 0 40 0;
-#X connect 58 0 25 0;
-#X connect 60 0 59 0;
-#X connect 61 0 60 0;
+#X connect 56 0 40 0;
+#X connect 58 0 57 0;
+#X connect 59 0 58 0;

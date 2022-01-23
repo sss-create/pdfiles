@@ -9,6 +9,7 @@
 #X obj 284 215 delwrite~ \$0-bbd_buffer 1000;
 #X msg 285 74 \$1 30;
 #X obj 285 99 line~;
+#X text 534 176 0 audio \; 1 del time \; 2 feedback \;;
 #X connect 0 0 6 0;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;

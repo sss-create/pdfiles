@@ -1,9 +1,9 @@
-#N canvas 0 28 1920 1052 10;
+#N canvas 0 0 1920 1052 10;
 #X obj 712 203 inlet;
 #X obj 712 512 vcf~ 3;
 #X obj 808 340 noise~;
 #X obj 794 390 *~;
-#X floatatom 761 226 5 0 0 1 Decay - -;
+#X floatatom 761 226 5 0 0 1 Decay - - 0;
 #X obj 896 426 +~ 100;
 #X obj 895 399 *~ 8000;
 #X obj 774 513 vcf~ 5;
@@ -40,7 +40,7 @@
 #X restore 896 338 pd cutoff_env;
 #X obj 896 315 * 2;
 #X text 1162 205 Noise;
-#N canvas 0 28 958 1050 FM_osc 0;
+#N canvas 0 0 1920 1052 FM_osc 0;
 #X obj 67 166 osc~ 150;
 #X obj 68 135 +~;
 #X obj 300 68 osc~ 50;
@@ -66,12 +66,14 @@
 #X connect 10 0 1 0;
 #X restore 711 389 pd FM_osc;
 #X obj 808 364 hip~ 100;
-#X obj 712 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 1125 203 5 0 0 0 - - -;
-#X floatatom 865 228 5 0 0 0 - - -;
+#X obj 712 224 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 1125 203 5 0 0 0 - - - 0;
+#X floatatom 865 228 5 0 0 0 - - - 0;
 #X obj 865 206 inlet;
 #X obj 711 613 hip~ 120;
+#X text 510 168 0 trig \; 1 decay \; 2 fm freq/amount \; 3 noise vol
+\;;
 #X connect 0 0 21 0;
 #X connect 1 0 25 0;
 #X connect 2 0 20 0;
