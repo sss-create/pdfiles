@@ -1,0 +1,134 @@
+#N canvas 0 0 1304 1050 12;
+#X text 884 364 linux remove spaces:;
+#X text 885 343 vim command:;
+#X text 1043 364 for file in *.wav do mv -- "$file" "$file// /_" done
+\;;
+#X text 979 343 %s/$/ \;, f 7;
+#X obj 885 244 loadbang;
+#X obj 761 215 soundfiler;
+#X msg 885 266 read /home/sss/downloads/samples-from/Soviet_Synths_From_Mars/WAV/07_Drums/samples.txt
+, f 87;
+#X listbox 761 110 20 0 0 0 - - - 0;
+#X obj 787 563 curve~;
+#X msg 787 539 1 \$1 -0.5 0 \$2 -0.5;
+#X floatatom 787 490 5 0 0 0 - - - 0;
+#X obj 787 514 pack f f, f 12;
+#X floatatom 611 363 5 0 0 0 - - - 0;
+#X obj 611 436 line~;
+#X obj 673 363 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 611 582 *~;
+#X obj 611 485 overdrive~ 1;
+#X obj 611 543 downsamp~;
+#X obj 611 338 r pitch0;
+#X floatatom 868 487 5 0 0 0 - - - 0;
+#X msg 611 410 0 \, 48000 \$1;
+#X floatatom 611 387 5 0 0 0 - - - 0;
+#X obj 764 61 hsl 128 15 0 99 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 100 100 cnv 15 460 300 empty empty empty 20 12 0 14 #efefef
+#404040 0;
+#X obj 114 129 hsl 300 20 0 99 0 0 empty empty sample -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X listbox 111 154 50 0 0 0 - - - 12;
+#X obj 114 203 hsl 200 20 0 3000 0 0 empty empty pitch -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X obj 114 253 hsl 200 20 0 500 0 0 empty empty attack -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X obj 114 303 hsl 200 20 1 500 0 0 empty empty decay -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X obj 114 353 hsl 200 20 1 10 0 0 empty empty drive -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X obj 344 353 hsl 200 20 0 24 0 0 empty empty bit\\\ rate -2 -8 1
+12 #9f9f9f #00faff #000000 0 1;
+#X obj 344 203 hsl 200 20 0 15000 0 0 empty empty cutoff -2 -8 1 12
+#9f9f9f #00faff #000000 0 1;
+#X obj 344 253 hsl 200 20 0 1 0 0 empty empty q -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X obj 344 303 hsl 200 20 0 1 0 0 empty empty volume -2 -8 1 12 #9f9f9f
+#00faff #000000 0 1;
+#X obj 12 18 loadbang;
+#X msg 12 43 0 1000 0 500 1 22000 0 1 0;
+#X obj 12 68 unpack f f f f f f f f f;
+#X obj 610 633 *~;
+#X obj 426 129 bng 20 250 50 0 empty empty empty 17 7 0 10 #efefef
+#00faff #000000;
+#X obj 925 66 f \$0;
+#X obj 925 43 loadbang;
+#X obj 885 294 text define \$0-samples;
+#X obj 761 84 text get \$0-samples;
+#X obj 611 460 tabread4~ \$0-x;
+#X obj 761 157 pack s f;
+#X obj 925 90 t b f, f 7;
+#X msg 761 184 read /home/sss/downloads/samples-from/Soviet_Synths_From_Mars/WAV/07_Drums/\$1
+\$2-x, f 86;
+#X obj 594 184 array define \$0-x 48000;
+#X obj 610 729 outlet~;
+#X obj 611 516 svf~;
+#X obj 675 337 inlet;
+#X obj 456 129 bng 20 250 50 0 empty empty reset 25 10 1 10 #efefef
+#00faff #000000;
+#X obj 827 26 inlet;
+#X obj 610 693 *~ 0.5;
+#X obj 610 663 *~;
+#X obj 739 620 inlet;
+#X obj 739 645 / 127;
+#X connect 4 0 6 0;
+#X connect 6 0 41 0;
+#X connect 7 0 25 0;
+#X connect 7 0 44 0;
+#X connect 8 0 15 1;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X connect 12 0 21 0;
+#X connect 13 0 43 0;
+#X connect 14 0 10 0;
+#X connect 14 0 21 0;
+#X connect 15 0 37 0;
+#X connect 16 0 49 0;
+#X connect 17 0 15 0;
+#X connect 18 0 12 0;
+#X connect 19 0 11 1;
+#X connect 20 0 13 0;
+#X connect 21 0 20 0;
+#X connect 22 0 42 0;
+#X connect 24 0 22 0;
+#X connect 26 0 12 0;
+#X connect 27 0 10 0;
+#X connect 28 0 19 0;
+#X connect 29 0 16 1;
+#X connect 30 0 17 1;
+#X connect 31 0 49 1;
+#X connect 32 0 49 2;
+#X connect 33 0 37 1;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 24 0;
+#X connect 36 1 26 0;
+#X connect 36 2 27 0;
+#X connect 36 3 28 0;
+#X connect 36 4 29 0;
+#X connect 36 5 31 0;
+#X connect 36 6 32 0;
+#X connect 36 7 33 0;
+#X connect 36 8 30 0;
+#X connect 37 0 54 0;
+#X connect 38 0 14 0;
+#X connect 39 0 45 0;
+#X connect 40 0 39 0;
+#X connect 42 0 7 0;
+#X connect 43 0 16 0;
+#X connect 44 0 46 0;
+#X connect 45 0 7 0;
+#X connect 45 1 44 1;
+#X connect 46 0 5 0;
+#X connect 49 0 17 0;
+#X connect 50 0 14 0;
+#X connect 51 0 35 0;
+#X connect 52 0 22 0;
+#X connect 53 0 48 0;
+#X connect 54 0 53 0;
+#X connect 55 0 56 0;
+#X connect 56 0 54 1;
+#X coords 0 -1 1 1 460 300 1 100 100;

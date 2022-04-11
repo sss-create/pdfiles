@@ -1,0 +1,17 @@
+#N canvas 0 0 1920 1052 12;
+#X obj 26 647 utility/simpler~;
+#X msg 1008 912 \; pd dsp 1;
+#X obj 1008 886 loadbang;
+#X obj 526 647 utility/simpler~;
+#X obj 26 306 utility/simpler~;
+#X obj 526 306 utility/simpler~;
+#X obj 26 611 dac~ 3;
+#X obj 526 611 dac~ 4;
+#X obj 26 952 dac~ 5;
+#X obj 526 952 dac~ 6;
+#X obj 1086 428 utility/dragonfly-control;
+#X connect 0 0 8 0;
+#X connect 2 0 1 0;
+#X connect 3 0 9 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
