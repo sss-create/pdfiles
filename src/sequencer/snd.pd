@@ -1,0 +1,22 @@
+#N canvas 935 0 983 518 12;
+#X obj 252 394 sel 0;
+#X floatatom 284 343 5 0 0 0 - - - 0;
+#X obj 252 369 mod, f 5;
+#X obj 252 420 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 321 345 loop length;
+#X obj 252 259 counter 16;
+#X floatatom 252 283 5 0 0 0 - - - 0;
+#X obj 252 219 inlet;
+#X obj 302 219 inlet;
+#X obj 352 219 inlet;
+#X obj 252 440 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 2 1;
+#X connect 2 0 0 0;
+#X connect 3 0 10 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 2;
+#X connect 9 0 1 0;
