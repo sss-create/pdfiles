@@ -1,4 +1,4 @@
-#N canvas 1018 0 449 510 12;
+#N canvas 0 0 1920 1052 12;
 #X obj 112 606 mrpeach/packOSC;
 #X obj 112 780 mrpeach/udpsend;
 #X obj 233 677 loadbang;
@@ -127,7 +127,7 @@ distance -10 10 \;;
 #X obj 1072 475 loadbang;
 #X text 1029 552 bass;
 #X text 1507 535 pad;
-#X obj 916 305 ../sequencer/euclidean-rhythm;
+#X obj 916 305 ../sequencer/euclidean;
 #X connect 0 0 110 0;
 #X connect 1 0 3 0;
 #X connect 2 0 81 0;
