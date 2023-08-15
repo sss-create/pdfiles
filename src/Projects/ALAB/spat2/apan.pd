@@ -1,0 +1,48 @@
+#N canvas 10 55 1229 1013 12;
+#X obj 421 20 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 327 43 loadbang;
+#X msg 327 67 0.5;
+#X text 107 124 azimut;
+#X obj 185 124 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 323 123 5 0 0 0 - - -;
+#X obj 185 144 hsl 128 15 -30 30 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 323 143 5 0 0 0 - - -;
+#X obj 185 163 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 323 162 5 0 0 0 - - -;
+#X obj 185 183 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6350 1;
+#X floatatom 323 182 5 0 0 0 - - -;
+#X text 107 144 elevation;
+#X text 107 163 spread;
+#X text 107 183 volume;
+#X obj 182 17 inlet;
+#X obj 230 17 inlet;
+#X obj 278 17 inlet;
+#X obj 327 17 inlet;
+#X obj 208 268 outlet;
+#X obj 258 269 outlet;
+#X obj 309 269 outlet;
+#X obj 363 269 outlet;
+#X obj 28 38 inlet~;
+#X obj 28 60 outlet~;
+#X text 444 107 control only \, no pan;
+#X connect 1 0 2 0;
+#X connect 2 0 10 0;
+#X connect 4 0 5 0;
+#X connect 4 0 19 0;
+#X connect 6 0 7 0;
+#X connect 6 0 20 0;
+#X connect 8 0 9 0;
+#X connect 8 0 21 0;
+#X connect 10 0 11 0;
+#X connect 10 0 22 0;
+#X connect 15 0 4 0;
+#X connect 16 0 6 0;
+#X connect 17 0 8 0;
+#X connect 18 0 10 0;
+#X connect 23 0 24 0;
+#X coords 0 -1 1 1 320 120 1 100 100;

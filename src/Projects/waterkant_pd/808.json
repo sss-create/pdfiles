@@ -1,0 +1,461 @@
+{
+    "Name": "808",
+    "Description": "The 808 soundscape transforms your body into a classic drum computer. Each motion sensor triggers a drum sound and additionally controls different drum parameters, for example tune or decay. Attach SOMI-1 motion sensor wearables to differnt body parts or moving objects and starting making groovy rhythms!",
+    "Explanation": "Put the sensors on your arms and legs. Shake sensors to trigger a drum sound. Tilt the sensors to change pitch and other sound parameters of the drum sound. Tilt first sensor along the X axis (i.e. lift up/down arm) to add global reverb. Tilt the fourth sensor along the Z axis to change the drum sound.",
+    "Version": "1.1",
+    "Author": "Sven Miesner",
+    "Email": "hi@svenmiesner.com",
+    "Year": "2023",
+    "License": "CC BY-NC-SA 4.0",
+    "Credits": [],
+    "Cover": "808_cover.png",
+    "Parameter":
+    {
+        "Slot 1": [
+        {
+            "Name": "Sample Select",
+            "PDParam": "sample0"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "overdrive0"
+        },
+        {
+            "Name": "Filter",
+            "PDParam": "filter0"
+        },
+        {
+            "Name": "Bitcrush",
+            "PDParam": "bitcrush0"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "decay0"
+        }],
+        "Slot 2": [
+        {
+            "Name": "Sample Select",
+            "PDParam": "sample1"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "overdrive1"
+        },
+        {
+            "Name": "Filter",
+            "PDParam": "filter1"
+        },
+        {
+            "Name": "Bitcrush",
+            "PDParam": "bitcrush1"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "decay1"
+        }],
+        "Slot 3": [
+        {
+            "Name": "Sample Select",
+            "PDParam": "sample2"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "overdrive2"
+        },
+        {
+            "Name": "Filter",
+            "PDParam": "filter2"
+        },
+        {
+            "Name": "Bitcrush",
+            "PDParam": "bitcrush2"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "decay2"
+        }],
+        "Slot 4": [
+        {
+            "Name": "Sample Select",
+            "PDParam": "sample3"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "overdrive3"
+        },
+        {
+            "Name": "Filter",
+            "PDParam": "filter3"
+        },
+        {
+            "Name": "Bitcrush",
+            "PDParam": "bitcrush3"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "decay3"
+        }],
+        "Slot 5": [
+        {
+            "Name": "Sample Select",
+            "PDParam": "sample4"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "overdrive4"
+        },
+        {
+            "Name": "Filter",
+            "PDParam": "filter4"
+        },
+        {
+            "Name": "Bitcrush",
+            "PDParam": "bitcrush4"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "decay4"
+        }],
+        "Slot 6": [
+        {
+            "Name": "Sample Select",
+            "PDParam": "sample5"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "overdrive5"
+        },
+        {
+            "Name": "Filter",
+            "PDParam": "filter5"
+        },
+        {
+            "Name": "Bitcrush",
+            "PDParam": "bitcrush5"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "decay5"
+        }],
+        "Reverb": [
+        {
+            "Name": "Mix",
+            "PDParam": "reverbMix"
+        },
+        {
+            "Name": "Feedback Gain",
+            "PDParam": "decay"
+        },
+        {
+            "Name": "Damping",
+            "PDParam": "damping"
+        },
+        {
+            "Name": "Bandwidth",
+            "PDParam": "bandWidth"
+        },
+        {
+            "Name": "Pre Delay",
+            "PDParam": "preDelay"
+        }],
+        "Delay": [
+        {
+            "Name": "Mix",
+            "PDParam": "wetLevel"
+        },
+        {
+            "Name": "Feedback",
+            "PDParam": "feedback"
+        },
+        {
+            "Name": "Time Left",
+            "PDParam": "delTimeLeft"
+        },
+        {
+            "Name": "Time Right",
+            "PDParam": "delTimeRight"
+        }]
+    },
+    "ParameterMappings": [
+    {
+        "PDParam": "feedback",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.2,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "filter0",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.2,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "overdrive0",
+        "SensorId": 0,
+        "SlotIndex": 6,
+        "MidiChannel": 0,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.1,
+        "SlewLimiterFall": 0.4,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "decay",
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.2,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "filter1",
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.2,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "reverbMix",
+        "SensorId": 1,
+        "SlotIndex": 1,
+        "MidiChannel": 1,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": true
+    },
+    {
+        "PDParam": "filter2",
+        "SensorId": 2,
+        "SlotIndex": 0,
+        "MidiChannel": 2,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "decay2",
+        "SensorId": 2,
+        "SlotIndex": 1,
+        "MidiChannel": 2,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "delTimeLeft",
+        "SensorId": 2,
+        "SlotIndex": 2,
+        "MidiChannel": 2,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "filter3",
+        "SensorId": 3,
+        "SlotIndex": 0,
+        "MidiChannel": 3,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "delTimeRight",
+        "SensorId": 3,
+        "SlotIndex": 2,
+        "MidiChannel": 3,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "sample3",
+        "SensorId": 3,
+        "SlotIndex": 2,
+        "MidiChannel": 3,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "filter4",
+        "SensorId": 4,
+        "SlotIndex": 0,
+        "MidiChannel": 4,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "filter5",
+        "SensorId": 5,
+        "SlotIndex": 0,
+        "MidiChannel": 5,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "decay5",
+        "SensorId": 5,
+        "SlotIndex": 1,
+        "MidiChannel": 5,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": true
+    }],
+    "NoteConfigs": [
+    {
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 60,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 60,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 2,
+        "SlotIndex": 0,
+        "MidiChannel": 2,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 60,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 3,
+        "SlotIndex": 0,
+        "MidiChannel": 3,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 60,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 4,
+        "SlotIndex": 0,
+        "MidiChannel": 4,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 60,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 5,
+        "SlotIndex": 0,
+        "MidiChannel": 5,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 60,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    }],
+    "PitchBendConfigs": []
+}

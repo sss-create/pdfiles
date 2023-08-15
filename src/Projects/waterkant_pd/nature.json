@@ -1,0 +1,293 @@
+{
+    "Name": "Nature",
+    "Description": "Be the wind on your very own journey through deep snow next to the lake, thin covered with ice. Be the tree, that bends within you. Bend the water like you used to in the bathtub. Rediscover what it means to be part of our beautiful nature.",
+    "Explanation": "Tilt and shake the first sensor to change the wind. Tilt the second sensor along the X axis to add rain and shake it to trigger different nature sounds (choose the sound via Tilt Z). Shake and tilt along Z axes remaining sensors to trigger a sound from a specific element, such as ice, snow, water and wood.",
+    "Version": "1.1",
+    "Author": "Sven Miesner",
+    "Email": "hi@svenmiesner.com",
+    "Year": "2023",
+    "License": "TODO",
+    "Credits": [],
+    "Cover": "nature_cover.png",
+    "Parameter":
+    {
+        "Rain": [
+        {
+            "Name": "Loudness",
+            "PDParam": "rainLoudness"
+        }],
+        "Wind": [
+        {
+            "Name": "Wind Loudness",
+            "PDParam": "windLoudness"
+        },
+        {
+            "Name": "Whistle Loudness",
+            "PDParam": "whistleLoudness"
+        },
+        {
+            "Name": "Base",
+            "PDParam": "baseWind"
+        },
+        {
+            "Name": "Middle Frequency",
+            "PDParam": "midWindFrequency"
+        },
+        {
+            "Name": "Middle Resonance",
+            "PDParam": "midWindQ"
+        }],
+        "Sound 1": [
+        {
+            "Name": "Sample",
+            "PDParam": "changeSample0"
+        },
+        {
+            "Name": "Trigger",
+            "PDParam": "trigSample0"
+        }],
+        "Sound 2": [
+        {
+            "Name": "Sample",
+            "PDParam": "changeSample1"
+        },
+        {
+            "Name": "Trigger",
+            "PDParam": "trigSample1"
+        }],
+        "Sound 3": [
+        {
+            "Name": "Sample",
+            "PDParam": "changeSample2"
+        },
+        {
+            "Name": "Trigger",
+            "PDParam": "trigSample2"
+        }],
+        "Sound 4": [
+        {
+            "Name": "Sample",
+            "PDParam": "changeSample3"
+        },
+        {
+            "Name": "Trigger",
+            "PDParam": "trigSample3"
+        }],
+        "Sound 5": [
+        {
+            "Name": "Sample",
+            "PDParam": "changeSample4"
+        },
+        {
+            "Name": "Trigger",
+            "PDParam": "trigSample4"
+        }],
+        "Sound 6": [
+        {
+            "Name": "Sample",
+            "PDParam": "changeSample5"
+        },
+        {
+            "Name": "Trigger",
+            "PDParam": "trigSample5"
+        }]
+    },
+    "ParameterMappings": [
+    {
+        "PDParam": "baseWind",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "midWindFrequency",
+        "SensorId": 0,
+        "SlotIndex": 1,
+        "MidiChannel": 0,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "midWindQ",
+        "SensorId": 0,
+        "SlotIndex": 2,
+        "MidiChannel": 0,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.1,
+        "SlewLimiterFall": 0.4,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "whistleLoudness",
+        "SensorId": 0,
+        "SlotIndex": 6,
+        "MidiChannel": 0,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 2.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.1,
+        "SlewLimiterFall": 0.4,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "rainLoudness",
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "changeSample1",
+        "SensorId": 1,
+        "SlotIndex": 2,
+        "MidiChannel": 1,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "trigSample1",
+        "SensorId": 1,
+        "SlotIndex": 6,
+        "MidiChannel": 1,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.5,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "changeSample2",
+        "SensorId": 2,
+        "SlotIndex": 2,
+        "MidiChannel": 2,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "trigSample2",
+        "SensorId": 2,
+        "SlotIndex": 6,
+        "MidiChannel": 2,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.5,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "changeSample3",
+        "SensorId": 3,
+        "SlotIndex": 2,
+        "MidiChannel": 3,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "trigSample3",
+        "SensorId": 3,
+        "SlotIndex": 6,
+        "MidiChannel": 3,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.5,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "changeSample4",
+        "SensorId": 4,
+        "SlotIndex": 2,
+        "MidiChannel": 4,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "trigSample4",
+        "SensorId": 4,
+        "SlotIndex": 6,
+        "MidiChannel": 4,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.5,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "changeSample5",
+        "SensorId": 5,
+        "SlotIndex": 2,
+        "MidiChannel": 5,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "trigSample5",
+        "SensorId": 5,
+        "SlotIndex": 6,
+        "MidiChannel": 5,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.5,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    }],
+    "NoteConfigs": [],
+    "PitchBendConfigs": []
+}

@@ -1,0 +1,265 @@
+{
+    "Name": "Ambient",
+    "Description": "The ambient soundscape consists of several voices using wavetable-like waveforms. Inspired by ethereal ambient music you can become one with synthesized sounds inside big space cathedrals. This is your departure into sublime spheres!",
+    "Explanation": "The first two sensors control two distinct pad sounds. Put the sensors on your arms, shake one of them to trigger a pad sound and lift up/down or roll your arms to change filters and other effects. Point in different directions (i.e. Tilt Z) to change the pitch of the pad sounds. Use the third and fourth sensor to change root note and scale via Tilt Z axes.",
+    "Version": "1.1",
+    "Author": "Sven Miesner",
+    "Email": "hi@svenmiesner.com",
+    "Year": "2023",
+    "License": "CC BY-NC-SA 4.0",
+    "Credits": [],
+    "Cover": "ambient_cover.png",
+    "Parameter":
+    {
+        "Main": [
+        {
+            "Name": "Root Note",
+            "PDParam": "rootNote"
+        },
+        {
+            "Name": "Scale",
+            "PDParam": "Scala"
+        },
+        {
+            "Name": "Volume",
+            "PDParam": "volume"
+        }],
+        "Reverb": [
+        {
+            "Name": "Mix",
+            "PDParam": "reverbLevel"
+        },
+        {
+            "Name": "Feedback Gain",
+            "PDParam": "decay"
+        },
+        {
+            "Name": "Damping",
+            "PDParam": "damping"
+        },
+        {
+            "Name": "Bandwidth",
+            "PDParam": "bandWidth"
+        },
+        {
+            "Name": "Pre Delay",
+            "PDParam": "preDelay"
+        }],
+        "Synth 1": [
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "filter0"
+        },
+        {
+            "Name": "Filter Q",
+            "PDParam": "q0"
+        },
+        {
+            "Name": "Delay Time Left",
+            "PDParam": "delayTimeLeft"
+        },
+        {
+            "Name": "Delay Time Right",
+            "PDParam": "delayTimeRight"
+        },
+        {
+            "Name": "Chorus LFO Speed",
+            "PDParam": "chorusLfoSpeed"
+        },
+        {
+            "Name": "Chorus Intensity",
+            "PDParam": "chorusIntensity"
+        }],
+        "Synth 2": [
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "filter1"
+        },
+        {
+            "Name": "Filter Q",
+            "PDParam": "q1"
+        },
+        {
+            "Name": "Level Fifths",
+            "PDParam": "levelFifths"
+        },
+        {
+            "Name": "Waveform",
+            "PDParam": "newWaveform"
+        }]
+    },
+    "ParameterMappings": [
+    {
+        "PDParam": "filter0",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "q0",
+        "SensorId": 0,
+        "SlotIndex": 1,
+        "MidiChannel": 0,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "chorusLfoSpeed",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "chorusIntensity",
+        "SensorId": 0,
+        "SlotIndex": 1,
+        "MidiChannel": 0,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "filter1",
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "q1",
+        "SensorId": 1,
+        "SlotIndex": 1,
+        "MidiChannel": 1,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": true
+    },
+    {
+        "PDParam": "newWaveform",
+        "SensorId": 1,
+        "SlotIndex": 2,
+        "MidiChannel": 1,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "levelFifths",
+        "SensorId": 1,
+        "SlotIndex": 6,
+        "MidiChannel": 1,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.2,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.1,
+        "SlewLimiterFall": 0.4,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "rootNote",
+        "SensorId": 2,
+        "SlotIndex": 2,
+        "MidiChannel": 2,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "reverbLevel",
+        "SensorId": 2,
+        "SlotIndex": 6,
+        "MidiChannel": 2,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.1,
+        "SlewLimiterFall": 0.6,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "Scala",
+        "SensorId": 3,
+        "SlotIndex": 2,
+        "MidiChannel": 3,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 2.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    }],
+    "NoteConfigs": [
+    {
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 24,
+        "NoteMax": 127,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 24,
+        "NoteMax": 127,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    }],
+    "PitchBendConfigs": []
+}

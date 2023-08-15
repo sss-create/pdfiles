@@ -1,0 +1,609 @@
+{
+    "Name": "Club",
+    "Description": "Beam yourself into an immersive techno club atmosphere, where you are controlling the sequences and sounds with your movements! Random rhythmic patterns are generated using an euclidean sequencer under the hood. Get ready to make some bangers with your movement!",
+    "Explanation": "This is a complex one! Shake the first sensor to create random patterns and change sounds of lead synth, bass synth and drums. Tilt the first sensor to change pitch, filter, reverb and bass level of the lead synth. Shake the second sensor to activate an arpeggiator for the lead synth. Tilt the second sensor to change arpeggiator rate and decay of lead synth, and filter and overdrive of bass synth. Shake and tilt the third sensor to apply override and change the filter for all drums. Shake the fourth sensor to change the kick sound and pattern. Shake the fifth sensor to change the clap sound and pattern. Tilt the sensor to change the filter of clap sound only. Shake the sixth sensor to change the sound and pattern of two hats. Tilt the sensor to change the decay of hats.",
+    "Version": "1.1",
+    "Author": "Sven Miesner",
+    "Email": "hi@svenmiesner.com",
+    "Year": "2023",
+    "License": "CC BY-NC-SA 4.0",
+    "Credits": [],
+    "Cover": "club_cover.png",
+    "BPM": true,
+    "Parameter":
+    {
+        "Main": [
+        {
+            "Name": "Pattern and Sound",
+            "PDParam": "globalNewSoundAndPattern"
+        },
+        {
+            "Name": "Pattern Only",
+            "PDParam": "globalnewPattern"
+        }],
+        "Reverb": [
+        {
+            "Name": "Feedback Gain",
+            "PDParam": "reverbFbGain"
+        },
+        {
+            "Name": "Damping",
+            "PDParam": "reverbDamping"
+        },
+        {
+            "Name": "Bandwidth",
+            "PDParam": "reverbBandwidth"
+        },
+        {
+            "Name": "Pre Delay",
+            "PDParam": "reverbPreDelay"
+        }],
+        "Lead Synth": [
+        {
+            "Name": "Euclid On",
+            "PDParam": "synthLeadEuclidOn"
+        },
+        {
+            "Name": "Euclid Pattern",
+            "PDParam": "synthLeadPattern"
+        },
+        {
+            "Name": "Arp On",
+            "PDParam": "synthLeadArpOn"
+        },
+        {
+            "Name": "Arp Speed",
+            "PDParam": "synthLeadArpSpeed"
+        },
+        {
+            "Name": "Arp Pitch Shift",
+            "PDParam": "synthLeadArpMaxPitchShift"
+        },
+        {
+            "Name": "Hold Note On",
+            "PDParam": "synthLeadHoldNote"
+        },
+        {
+            "Name": "Decay",
+            "PDParam": "synthLeadDecay"
+        },
+        {
+            "Name": "Bass Level",
+            "PDParam": "synthLeadBassLevel"
+        },
+        {
+            "Name": "Reverb Mix",
+            "PDParam": "synthLeadReverb"
+        }],
+        "Lead Synth cont.": [
+        {
+            "Name": "Scale",
+            "PDParam": "synthLeadScala"
+        },
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "synthLeadFilter"
+        },
+        {
+            "Name": "Filter Q",
+            "PDParam": "synthLeadQ"
+        },
+        {
+            "Name": "Filter Envelope",
+            "PDParam": "synthLeadFilterEnv"
+        },
+        {
+            "Name": "Delay Filter LFO",
+            "PDParam": "synthLeadDelFiltLfo"
+        },
+        {
+            "Name": "Rnd. Delay Time",
+            "PDParam": "synthLeadRandomDelay"
+        }],
+        "Bass Synth": [
+        {
+            "Name": "Pattern",
+            "PDParam": "synthBassPattern"
+        },
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "synthBassFilter"
+        },
+        {
+            "Name": "Drive",
+            "PDParam": "synthBassDrive"
+        }],
+        "Drums Global": [
+        {
+            "Name": "Volume",
+            "PDParam": "drumsVolume"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "drumsOverdrive"
+        },
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "drumsFilter"
+        },
+        {
+            "Name": "Filter Q",
+            "PDParam": "drumsQ"
+        },
+        {
+            "Name": "Reverb Mix",
+            "PDParam": "drumsReverb"
+        }],
+        "Kick Drum": [
+        {
+            "Name": "Pattern",
+            "PDParam": "kickPattern"
+        },
+        {
+            "Name": "Sound",
+            "PDParam": "kickSound"
+        },
+        {
+            "Name": "Volume",
+            "PDParam": "kickVolume"
+        },
+        {
+            "Name": "Overdrive",
+            "PDParam": "kickOverdrive"
+        },
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "kickFilter"
+        }],
+        "Clap": [
+        {
+            "Name": "Pattern",
+            "PDParam": "clapPattern"
+        },
+        {
+            "Name": "Sound",
+            "PDParam": "clapSound"
+        },
+        {
+            "Name": "Filter Cutoff",
+            "PDParam": "clapFilter"
+        },
+        {
+            "Name": "Filter Q",
+            "PDParam": "clapQ"
+        }],
+        "Hats": [
+        {
+            "Name": "Pattern Hat A",
+            "PDParam": "hatAPattern"
+        },
+        {
+            "Name": "Sound Hat A",
+            "PDParam": "hatASound"
+        },
+        {
+            "Name": "Decay Hat A",
+            "PDParam": "hatADecay"
+        },
+        {
+            "Name": "Pattern Hat B",
+            "PDParam": "hatBPattern"
+        },
+        {
+            "Name": "Sound Hat B",
+            "PDParam": "hatBSound"
+        },
+        {
+            "Name": "Decay Hat B",
+            "PDParam": "hatBDecay"
+        }]
+    },
+    "ParameterMappings": [
+    {
+        "PDParam": "synthLeadFilter",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadBassLevel",
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadReverb",
+        "SensorId": 0,
+        "SlotIndex": 1,
+        "MidiChannel": 0,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadQ",
+        "SensorId": 0,
+        "SlotIndex": 1,
+        "MidiChannel": 0,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "globalNewSoundAndPattern",
+        "SensorId": 0,
+        "SlotIndex": 6,
+        "MidiChannel": 0,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadEuclidOn",
+        "SensorId": 0,
+        "SlotIndex": 6,
+        "MidiChannel": 0,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadPattern",
+        "SensorId": 0,
+        "SlotIndex": 6,
+        "MidiChannel": 0,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadRandomDelay",
+        "SensorId": 0,
+        "SlotIndex": 6,
+        "MidiChannel": 0,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthBassFilter",
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadArpSpeed",
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthBassDrive",
+        "SensorId": 1,
+        "SlotIndex": 1,
+        "MidiChannel": 1,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": true
+    },
+    {
+        "PDParam": "synthLeadDecay",
+        "SensorId": 1,
+        "SlotIndex": 1,
+        "MidiChannel": 1,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": true
+    },
+    {
+        "PDParam": "synthLeadScala",
+        "SensorId": 1,
+        "SlotIndex": 2,
+        "MidiChannel": 1,
+        "InputParam": 2,
+        "Controller": 18,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "synthLeadArpOn",
+        "SensorId": 1,
+        "SlotIndex": 6,
+        "MidiChannel": 1,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "drumsFilter",
+        "SensorId": 2,
+        "SlotIndex": 0,
+        "MidiChannel": 2,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "drumsQ",
+        "SensorId": 2,
+        "SlotIndex": 1,
+        "MidiChannel": 2,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "drumsOverdrive",
+        "SensorId": 2,
+        "SlotIndex": 6,
+        "MidiChannel": 2,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.1,
+        "SlewLimiterFall": 0.4,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "kickPattern",
+        "SensorId": 3,
+        "SlotIndex": 6,
+        "MidiChannel": 3,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "kickSound",
+        "SensorId": 3,
+        "SlotIndex": 6,
+        "MidiChannel": 3,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "clapFilter",
+        "SensorId": 4,
+        "SlotIndex": 0,
+        "MidiChannel": 4,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "clapQ",
+        "SensorId": 4,
+        "SlotIndex": 1,
+        "MidiChannel": 4,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "clapPattern",
+        "SensorId": 4,
+        "SlotIndex": 6,
+        "MidiChannel": 4,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "clapSound",
+        "SensorId": 4,
+        "SlotIndex": 6,
+        "MidiChannel": 4,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "hatADecay",
+        "SensorId": 5,
+        "SlotIndex": 0,
+        "MidiChannel": 5,
+        "InputParam": 0,
+        "Controller": 16,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "hatBDecay",
+        "SensorId": 5,
+        "SlotIndex": 1,
+        "MidiChannel": 5,
+        "InputParam": 1,
+        "Controller": 17,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": true
+    },
+    {
+        "PDParam": "hatAPattern",
+        "SensorId": 5,
+        "SlotIndex": 6,
+        "MidiChannel": 5,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "hatASound",
+        "SensorId": 5,
+        "SlotIndex": 6,
+        "MidiChannel": 5,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "hatBPattern",
+        "SensorId": 5,
+        "SlotIndex": 6,
+        "MidiChannel": 5,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    },
+    {
+        "PDParam": "hatBSound",
+        "SensorId": 5,
+        "SlotIndex": 6,
+        "MidiChannel": 5,
+        "InputParam": 6,
+        "Controller": 22,
+        "Scale": 1.0,
+        "SlewLimiterShape": 0.5,
+        "SlewLimiterRise": 0.0,
+        "SlewLimiterFall": 0.0,
+        "InverseInputParam": false
+    }],
+    "NoteConfigs": [
+    {
+        "SensorId": 0,
+        "SlotIndex": 0,
+        "MidiChannel": 0,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 36,
+        "NoteMax": 96,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    },
+    {
+        "SensorId": 1,
+        "SlotIndex": 0,
+        "MidiChannel": 1,
+        "InputParamGate": 6,
+        "InputParamNote": 2,
+        "NoteMin": 0,
+        "NoteMax": 127,
+        "VelocityNoteOn": 127,
+        "VelocityNoteOff": 0,
+        "GateThreshold": 0.3,
+        "InverseParamGate": false,
+        "InverseParamNote": false
+    }],
+    "PitchBendConfigs": []
+}
