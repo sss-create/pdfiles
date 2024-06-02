@@ -1,4 +1,4 @@
-#N canvas -7 0 1920 989 10;
+#N canvas -7 0 958 980 10;
 #X text 3 -3 some ideas from the michael gerzon studio sound reverb articles of 1971 and 1972;
 #X obj 235 114 inlet~;
 #X obj 363 111 inlet~;
@@ -125,6 +125,7 @@
 #X obj 1087 146 *~, f 19;
 #X text 3 33 4 prime number delay lines with ratios between 0.5 and 1 47 \, 67 \, 101 \, 137;
 #X text 363 5 fb 0 - 100;
+#X text 339 664 TODO: * modulation of del time \; * modulation of allpass time to prevent ringing \;;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
 #X connect 3 0 74 0;

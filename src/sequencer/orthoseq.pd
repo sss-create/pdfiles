@@ -1,12 +1,12 @@
 #N canvas 0 28 1131 1050 12;
-#X floatatom 169 134 5 0 0 0 - - -;
+#X floatatom 169 134 5 0 0 0 - - - 0;
 #X text 209 134 step 0-99;
 #X obj 169 108 counter, f 13;
 #X obj 562 326 sel 1;
 #X msg 213 81 bang;
-#X floatatom 405 263 5 0 0 0 - - -;
-#X floatatom 406 285 5 0 0 0 - - -;
-#X floatatom 406 307 5 0 0 0 - - -;
+#X floatatom 405 263 5 0 0 0 - - - 0;
+#X floatatom 406 285 5 0 0 0 - - - 0;
+#X floatatom 406 307 5 0 0 0 - - - 0;
 #X obj 562 352 outlet;
 #X obj 512 304 outlet;
 #X obj 169 58 inlet;
@@ -22,27 +22,17 @@
 #N canvas 0 28 1920 1052 arrays 0;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-gate 99 float 3;
-#A 0 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-;
+#A 0 1 1 1 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 99 -1 200 140 1 0 0;
 #X restore 436 -537 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-note 99 float 3;
-#A 0 16 89 46 0 50 58 50 58 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 -0.0285715 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0;
+#A 0 16 89 46 0 50 58 50 58 60 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.0285715 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 99 -1 200 140 1 0 0;
 #X restore 436 -701 graph;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-duration 127 float 3;
-#A 0 2 4.25 0.25 0.5 0.25 0.5 0.25 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0;
+#A 0 2 4.25 0.25 0.5 0.25 0.5 0.25 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 127 -1 200 140 1 0 0;
 #X restore 436 -373 graph;
 #X restore 168 246 pd arrays;
@@ -51,9 +41,9 @@
 #X obj 249 201 tabread \$0-note;
 #X obj 248 224 tabread \$0-duration;
 #X obj 248 246 tabread \$0-gate;
-#X floatatom 664 163 5 0 0 1 note - -;
-#X floatatom 664 185 5 0 0 1 duration - -;
-#X floatatom 664 142 5 0 0 1 step - -;
+#X floatatom 664 163 5 0 0 1 note - - 0;
+#X floatatom 664 185 5 0 0 1 duration - - 0;
+#X floatatom 664 142 5 0 0 1 step - - 0;
 #N canvas 0 28 1131 1050 orthoseq-write 0;
 #X obj 38 39 inlet;
 #X obj 176 39 inlet;
@@ -69,7 +59,7 @@
 #X connect 3 0 5 1;
 #X connect 3 0 6 1;
 #X restore 521 225 pd orthoseq-write;
-#X floatatom 664 206 5 0 0 1 gate - -;
+#X floatatom 664 206 5 0 0 1 gate - - 0;
 #N canvas 0 28 1131 1050 orthoseq-read 0;
 #X obj 55 42 inlet;
 #X msg 55 133 set \$1;
@@ -91,6 +81,7 @@
 #X connect 8 0 3 0;
 #X connect 9 0 5 0;
 #X restore 395 225 pd orthoseq-read;
+#X floatatom -20 196 5 0 0 0 - - - 12;
 #X connect 0 0 21 0;
 #X connect 0 0 23 0;
 #X connect 0 0 24 0;
