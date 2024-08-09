@@ -1,4 +1,4 @@
-#N canvas 0 0 1140 1048 12;
+#N canvas 0 0 958 1044 12;
 #X obj -209 93 vstplugin~;
 #X msg 86 111 open -p -e C:/Program\ Files/Common\ Files/VST3/The\ Drop.vst3;
 #X obj -209 180 dac~;
