@@ -1,4 +1,4 @@
-#N canvas 0 28 1131 1050 12;
+#N canvas 0 0 1920 1052 12;
 #X floatatom 169 134 5 0 0 0 - - - 0;
 #X text 209 134 step 0-99;
 #X obj 169 108 counter, f 13;
@@ -81,7 +81,6 @@
 #X connect 8 0 3 0;
 #X connect 9 0 5 0;
 #X restore 395 225 pd orthoseq-read;
-#X floatatom -20 196 5 0 0 0 - - - 12;
 #X connect 0 0 21 0;
 #X connect 0 0 23 0;
 #X connect 0 0 24 0;
