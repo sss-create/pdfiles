@@ -1,0 +1,4 @@
+wenn usb 2 es8 gets disconnet:
+  * dsp in pd off
+  * replug es8
+  * start jack
