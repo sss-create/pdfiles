@@ -71,7 +71,7 @@ hush
 --------------------------------------------------- track 2b ass line: f, g#, c
 d2 $ struct "t(7,16)" $ n "f2*2 ~ f2?0.7 f2*3"
   # s "mydevice"
-  # amp 1
+  # amp (min 0.2 (abs $ rand))
 
 -- todo: off grid
 d1 $ segment 8 $ (every 2 (slow 2)) 
@@ -98,7 +98,7 @@ hush
 --   $ every 4 (shuffle 2 . slow 2 . segment 16 . (|+ n 12)) 
 --   $ n ("~ [f2 ~] [gs2 f3] f2 <c2 [gs2 f3]> ~@3" |- 12)
 d1 $ every 4 (shuffle 2 . slow 2 . segment 16 . (|+ n 12)) 
-   $ n ("~ [f2 ~] [f2 f3] f2 <f2 [f2 f3]> ~@3" |- 12)
+  $ n ("~ [f2 ~] [f2 f3] f2 <f2 [f2 f3]> ~@3" |- 12)
   # amp 1
   # s "piston honda"
 
@@ -123,7 +123,7 @@ hush
 let dascale = "melodicMajor"; chord = "'min"; melo = "0 4 6 3"; root = "f3 f4";
 in d1 $ slow 2 $ struct "t(<9 7 11 7>,16)" 
   $ every 2 (slow 2) $ n (scale dascale (melo) + root) # s "chord"
-  # amp 1
+  # amp perlin
   # s "PISTON"
 
 let dascale = "melodicMajor"; chord = "'min"; melo = "0 4 6 3"; root = "f3 f4";
@@ -189,13 +189,14 @@ hush
 d1 $ segment 16 $ slow 4 
   $ every 2 (fast 2 . linger 0.2 . ply 2) $ struct "t(5,16)" 
   $ n ("<f3 f4> [c4|f3] ~ ds3*3" |- 24)
-  # s "mydevice"
-  # amp "0.1 0.2"
+  # s "furthrrrr"
+  # amp perlin
+  -- # amp "0.1 0.2"
 
 
 d3 $ segment 16 $ every 2 (linger 0.4 . bite 4 "2 <0 3> 1 3")
   $ fastGap 4 . slow 2 
-  $ n "f2 . f2 ds2 . [f2|c2|ds2] <f2 ds2> . ~ f2"
+  $ n "f2'min . f2'min ~ . [f2'min|c2'min|ds2'min] <gs2'min7 ~> . ~@2"
   # s "mydevice"
   # amp "0.1 0.2"
   # nudge ((slow 4 (perlin*5)) * (choose [0.002, -0.001]))
@@ -205,7 +206,7 @@ d2 $ segment 16 $ every 3 (scramble 2) $ struct "t(<9 7>,32)"
   $ note "<f2*4 ds3*4> ~ f2*4 gs2*4 c2*4" 
   # nudge (chooseBy (tri*1.3) (map (* 0.0001) [12, 29, 87, 45]))
   # s "eureo" 
-  # amp 1
+  # amp perlin
 
 hush
 
@@ -239,19 +240,19 @@ hush
 -------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- 9
 -- bass line: f, d#, g#, bf
-d1 $ fastGap 2 $ every 2 (rev . (\x -> (x |+ n "<12 5>"))) 
+d1 $ segment 16 $  every 2 (rev . (\x -> (x |- n "<12 4>"))) 
   $ slow 2 $ linger 0.75 . fastGap 2
-  $ n "~ f3*2 [c4|c3|gs4]"
-  # s "mydevice"
+  $ n "~ f3*2 [c4|c3|gs4]" 
+  # s "piston"
   # amp 1
 
 d3 $ fastCat [n "<f3'min ~*4> ~", n ("f3'min9 ~ ~ ~!3" |+ 12)]
   # s "chord"
   # amp rand
 
-d3 $ every 3 (scramble 2 . ply 1.5) $ n (cat ["f2*3 ds3", "[f2*2|gs2*4]"])
-  # s "mydevice"
-  # amp 1 
+-- d3 $ every 3 (scramble 2 . ply 1.5) $ n (cat ["f2*3 ds3", "[f2*2|gs2*4]"])
+--  # s "mydevice"
+--  # amp 1 
 
 hush
 
@@ -265,37 +266,35 @@ d1 $ segment 16
   # amp rand
 
 let dascale = "hirajoshi"; chord = "'min"; melo = "0 3 5 1 -3"; root = "f3 f4" 
-in d1 $ struct "t(<9 7 11 7>,16)" 
+in d2 $ struct "t(<9 7 11 7>,16)" 
   $ every 2 (slow 2) $ n (scale dascale (melo) + root) # s "chord"
   # amp 1
   # s "co"
 
-d3 $ fastGap 2 
-  $ slow 2 $ n ("[gs2 f3 ~!2] <f3*2 [c3 gs3 ds2 f3]> ~" + "<5 3 5 1>")
-  # s "chord"
-  # amp 1
-
 hush
 
 
 
 
 -------------------------------------------------------------------------------
------------------------------------------------------------------------------ 10 
-d3 $ n "f3'min ~@3 <f3'min7!3 g3'min'ii>" 
-  # amp rand
-  # s "mydevice"
-  # nudge 0.1
-
+----------------------------------------------------------------------------- 11 
+-- BREAKBEAT
 d3 $ every 8 (|+ n 5) $ n "f3'min*16"
   # amp rand
   # s "mydevice"
 
-d1 $ segment 16 $ fastGap 2 $ every 2 (rev . (\x -> (x |+ n "<12 5>"))) 
+d1 $ segment 16 $ fastGap 2 $ every 2 (rev . (\x -> (x |+ n "<12 -12>"))) 
   $ linger 0.75 . fastGap 2
   $ n "~ f3*2 [ds2|cs3|gs4]"
-  # s "mydevice"
-  # amp 1
+  # s "piston"
+  # amp rand
+
+-- pad
+d2 $ segment 16 $ fastGap 2 $ every 2 (rev . (\x -> (x |+ n "<12 -12>"))) 
+  $ linger 0.75 . fastGap 2
+  $ n "~ f3*2 [ds2|cs3|gs4]"
+  # s "furthrrr"
+  # amp rand
 
 hush
 
@@ -303,10 +302,7 @@ hush
 
 
 -------------------------------------------------------------------------------
------------------------------------------------------------------------------ 10 
-d3 $ every 8 (|+ n 5) $ n "f3'min*16"
-  # amp rand
-  # s "mydevice"
+----------------------------------------------------------------------------- 12 
 
 hush
 
@@ -603,3 +599,13 @@ d3 $ segment 16 $ every 2 (fastGap "<2 4>")
   # s "mydevice"
   # amp rand
   # nudge ((tri+rand) * 0.01)
+
+d1 $ fastGap 2 
+  $ slow 2 $ n ("[gs2 f3 ~!2] <f3*2 [c3 gs3 ds2 f3]> ~" + "<5 3 5 1>")
+  # s "chord"
+  # amp 1
+
+d3 $ n "f3'min ~@3 <f3'min7!3 g3'min'ii>" 
+  # amp rand
+  # s "mydevice"
+  # nudge 0.1

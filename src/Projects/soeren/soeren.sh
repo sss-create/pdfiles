@@ -15,6 +15,6 @@ sleep 3
 
 # supercollider, pd and tidal:
 # scide ~/soeren/soeren.scd &
-pd -rt -open ~/repositories/pdfiles/src/Projects/soerenliveDIRECT.pd &
+# pd -rt -open ~/repositories/pdfiles/src/Projects/soerenliveDIRECT.pd &
 st -f "Terminus:pixelsize=18:antialias=true:autohint=true" -e vim ~/repositories/soeren/soeren.tidal -c TidalSend -c "wincmd H"
 
