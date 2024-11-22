@@ -156,7 +156,7 @@
 #X obj 1007 347 tgl 50 0 empty empty empty 0 -12 0 24 #fcfcfc #000000 #000000 0 1;
 #X obj 899 419 *~;
 #X obj 964 238 *~ 0.1;
-#N canvas 1718 -22 148 499 gr 0;
+#N canvas 1712 10 173 560 gr 0;
 #X obj 618 149 hsl 196 23 -60 0 0 0 empty empty empty -2 -12 0 24 #606060 #00faff #00faff 0 1;
 #X obj 487 128 bng 50 250 50 0 empty empty ++ 0 -12 0 24 #606060 #00faff #00faff;
 #X obj 429 129 bng 50 250 50 0 empty empty -- 0 -12 0 24 #606060 #00faff #00faff;
@@ -230,6 +230,8 @@
 #X obj 219 104 + 72;
 #X obj 899 377 adc~ 1;
 #X obj 539 104 + 72;
+#X floatatom 900 518 5 0 0 0 - - - 36;
+#X text 1026 528 hz;
 #X connect 0 0 16 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -254,6 +256,7 @@
 #X connect 13 0 6 0;
 #X connect 13 1 7 0;
 #X connect 21 0 20 0;
+#X connect 21 1 57 0;
 #X connect 22 0 35 2;
 #X connect 23 0 35 4;
 #X connect 24 0 35 3;

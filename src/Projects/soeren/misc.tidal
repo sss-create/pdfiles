@@ -1,3 +1,16 @@
+{--
+minPent majPent ritusen egyptian kumai hirajoshi iwato chinese indian pelog
+prometheus scriabin gong shang jiao zhi yu whole wholetone augmented augmented2
+hexMajor7 hexDorian hexPhrygian hexSus hexMajor6 hexAeolian major ionian
+dorian phrygian lydian mixolydian aeolian minor locrian harmonicMinor 
+harmonicMajor melodicMinor melodicMinorDesc melodicMajor bartok hindu todi purvi
+marva bhairav ahirbhairav superLocrian romanianMinor hungarianMinor 
+neapolitanMinor enigmatic spanish leadingWhole lydianMinor neapolitanMajor
+locrianMajor diminished octatonic diminished2 octatonic2 messiaen1 messiaen2
+messiaen3 messiaen4 messiaen5 messiaen6 messiaen7 chromatic bayati hijaz sikah
+rast saba iraq
+--}
+
 --d3 $ outside 4 (repeatCycles 4) 
 d3 $ repeatCycles 1
   $ struct("t(8,8)") $ n (choose [0,2,8]) 
@@ -109,6 +122,127 @@ d3 $ when ((elem '2').show) (fast 4) $ n "f3"
 hush
 
 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------MISC
+
+-- juno cool
+d3 $ segment 16 $ n "f3'min ~@3 <f3'min7!3 g3'min'ii>" 
+  # amp rand
+  # s "mydevice"
+  # nudge 0.1
+
+-- done
+-- insert silence in every 2nd step every 2
+d1 $ fast 4 
+  $ n ((cat [scale "minor" "~@3 <c4 gs3 f4> ~ gs3", "<c3 f3>*2"]) |+ 12)
+  # s "mydevice"
+  # amp rand
+
+-- s1
+--d5 $ every 6 (# silence) $ n "~@3 <gs5*2 d5 ~>@3 <f5 ~>@2 <f5 c6>@5" 
+-- d3 $ n "~@4 . gs4 f4 . ~@2 c4" 
+d3 $ n "~@3 f4@2 f5"
+  # s "mydevice" 
+  # amp (select (rand) [0.3, 0.4, 0.2])
+
+-- s2
+d2 $ every 4 (fastGap 2) $ note ("~@4 f5!2 <f4!2 gs4> ~@3" |- 24)
+  # s "FURTHRRR"
+  # amp 1
+  # nudge "0.2 0.1"
+
+
+d3 $ note "~@6 f3@" # s "mydevice" # amp 1
+
+-- ok
+d2 $ note ("~@6 <<f [gs c]> <[gs5 <c6 f3>] <[f6 gs6 c5]>>>@2" |- 24)
+  # s "mydevice"
+  # amp 1
+
+-- schoen
+d3 $ n "<f3'min7 f3'min9> ~ g3'min [c3'min7 c3'min]"
+-- d3 $ fastGap [(2:0.1)|(1:0.9)] $ n "<f3'min7 f3'min9> ~ g3'min [c3'min7 c3'min]"
+-- d2 $  n ("~ <f3'min f3'min> ~ f3'min ~@3 [f3'min f3'min]" |- 12)
+-- d2 $ n "a7 g3 g3 [c3 c3]"
+  # amp 1
+  # s "chord"
+  # nudge (chooseBy "0 0.25 0.5 1" [0, 0.12, 0.13])
+
+d2 $ n "f3'min ~@2 f3'min ~ ~*2@3"
+  # amp 1
+  # s "chord"
+  # nudge (chooseBy "0 0.25 0.5 1" [0.15, 0.12, 0.13])
+
+-- d2 $ select 0 [(n "f4*4"), (n "g3*3")]
+-- d2 $ every 3 ( $ n "g3*3"
+-- d2 $ select ("<0 1 0 0>") [(n "g3*3"), (fast 4 (n "f4 gs3 gs4 c4*2"))]
+-- d2 $ squeeze ("<1 2 1 0>") [(n "g3*3"), (fast 4 (n "f4 gs3 gs4 c4*2")), (n "g2*8")]
+-- d3 $ squeeze ("<1!2 0 2>")
+d3 $ struct "t(9,16)" $ squeeze ("<1!2 0 2>")
+        (every 3 (|+ n 24) (n "g3 f5*3 ds6" 
+          -- # nudge (chooseBy "0 0.25 0.5 1" [0.15, 0.12, 0.13])))
+      , (n ("f3 gs2. gs3 ds5 f6 ds6 . c3*2" |- 12)
+          # nudge (chooseBy "1 0.2 0.4 0.2" [0.01, 0.03, 0.07, 0.06]))
+      , (n "[c3 f4 g2 c4] ~ f4*2 gs4")]
+  # s "chord"
+  # amp 1
+
+d3 $ struct "t(9,16)" $ squeeze ("<1!2 0 2>")
+        [(every 3 (|- n 24) (n "g3 f5*3 ds6" 
+          # nudge (chooseBy "0 0.25 0.5 1" [0.15, 0.12, 0.13])))
+      , (every 2 (slow 2) $ n ("f3 gs2. gs3 ds5 f6 ds6 . c3*2" |- 12)
+          # nudge (chooseBy "1 0.2 0.4 0.2" [0.01, 0.03, 0.07, 0.06]))
+      , (n "[c3 f4 g2 c4] ~ f4*2 gs4")]
+  # s "chord"
+  # amp 1
+
+-- d2 $ every 4 (fast 2 . (# qtrigger 2)) $ scramble 4 $ n "c3 f3 gs4 gs3" 
+d3 $ every 2 (rotR 8 . (# trigger 2)) $ scramble 2 $ n "c3 f3 gs4 c5 gs3" 
+  # s "chord"
+  # amp 1
+
+--d3 $ every 1 (# s "ch") $ n "f3 f2 f4*2"
+--d3 $ every 1 (# s "ch") $ n "f3 f2 f4*2"
+d3 $ every 1 (# n "ch") $ s (choose [0,2,8])
+  # amp 1
+
+d3 $ segment 16 $ every 2 (linger 4) $ swingBy (1/3) 4 
+  $ n ((cat [scale "minor" "~@3 <c4 gs3 f4> ~ gs3", "<c3 f3>*2"]) |+ 24)
+  # s "mydevice"
+  # amp rand
+
+d3 $ every 2 (fastGap 2 . trunc 0.75 . (|- n 34 )) 
+  $ n "c4 [~ gs3] . f5 ~ . f6@2"
+  # s "mydevice"
+  # amp rand
+  # nudge ((tri+rand) * 0.01)
+
+d1 $ every 4 (\x -> fastcat [x, "f7"])
+  $ n ("~ <f3!3 bf3> f2!2 ~@2 " |- 12 )
+  # s "mydevice" 
+  # amp rand
+
+d2 $ segment 16 $ rev $ every 4 (\x -> cat ["f7", x])
+  $ n ("~ <f3!3 bf3> f2!2 ~@2 " - 0)
+  # s "mydevice" 
+  # amp rand
+
+d2 $ segment 16 $ every 2 (fastGap "<2 4>")
+  $ n (cat [scale "minor" "~ <0 0 [0 9 9]> 1 <4 6 7> 2", scale "minor" "~ 0*2"])
+  # s "mydevice"
+  # amp rand
+  # nudge ((tri+rand) * 0.01)
+
+d2 $ segment 16 $ fastGap 2 
+  $ slow 2 $ n ("[gs2 f3 ~!2] <f3*2 [c3 gs3 ds2 f3]> ~" + "<5 3 5 1>")
+  # s "chord"
+  # amp 1
+
 
 
 ------------------------------------------------------------------------------
@@ -137,3 +271,4 @@ hush
 
 resetCycles
 
+:wa
