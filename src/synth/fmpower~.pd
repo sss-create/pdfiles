@@ -1,8 +1,8 @@
-#N canvas 0 0 1418 1050 12;
+#N canvas 0 0 1028 1050 12;
 #X obj 155 68 phasor~;
-#X obj 155 315 cos~;
+#X obj 97 321 cos~;
 #X floatatom 155 49 5 0 0 0 - - - 0;
-#X obj 155 265 +~;
+#X obj 97 271 +~;
 #X obj 215 215 *~;
 #X floatatom 251 196 5 0 0 0 - - - 0;
 #X obj 215 233 /~ 6.28319;
@@ -14,7 +14,7 @@
 #X obj 353 237 /~ 6.28319;
 #X msg 479 212 6.28319;
 #X msg 446 212 1;
-#X obj 155 291 +~;
+#X obj 97 297 +~;
 #X obj 427 68 osc~;
 #X floatatom 427 49 5 0 0 0 - - - 0;
 #X obj 427 127 *~;

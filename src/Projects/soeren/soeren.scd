@@ -8,9 +8,10 @@
   MIDIClient.destinations;
 
   ~midiOut = MIDIOut.newByName("Pure Data", "Pure Data Midi-In 1");
+  // ~midiOut = MIDIOut.newByName("midit", "Midi Through");
 
   // test out
   // ~midiOut.noteOn(0, 60, 127); // (channel, note, velocity);
 )
 
- ~dirt.soundLibrary.addMIDI(\mydevice, ~midiOut);
+~dirt.soundLibrary.addMIDI(\mydevice, ~midiOut);

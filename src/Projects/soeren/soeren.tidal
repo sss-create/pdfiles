@@ -23,7 +23,7 @@ setcps (28/60/4)
 -- sync test
 d1 $ n "a5 a4!3"
   # amp 1
-  # s "piston honda"
+  # s "piston" 
 
 d2 $ n "a5 a4!3"
   # amp 1
@@ -47,12 +47,12 @@ d2 $ silence
 d1 $ struct "t(11,16)" $ n "f2 . ds2 f3 gs2 ~ . c2!2"
   # amp 1
   # s "PISTON"
-  # nudge ((slow 4 (perlin*5)) * (choose [0.0015, 0.002, 0.001]))
 
-d2 $ struct "t(11,16)" $ (n "f2 . ds2 f3 gs3 ~ . c2!2" |+ n (12))
+d2 $ struct "t(11,16)" 
+  $ (n "f2 . ds2 f3 gs3 ~ . c2!2" |+ n (0))
   # amp 1
   # s "FURTHRRRR"
-  # nudge ((slow 4 (perlin*5)) * (choose [0.002, 0.003, 0.001]))
+  -- # nudge ((slow 4 (perlin*5)) * (choose (fmap (* 0.1) [0.0015, 0.002, 0.001]))
 
 d3 $ slow 4 $ n "~!7 f4'min"
   # s "CHORD"
@@ -74,7 +74,7 @@ hush
 -------------------------------------------------------------------------------2
 -- track 2b ass line: f, g#, c
 
-d2 $ struct "t(7,16)" $ n "f2*2 ~ f2?0.7 f2*3"
+d2 $ struct "t(16,16)" $ n "f2*2 ~ f2?0.7 f2*3"
   # s "FURTHRRRR"
   # amp (min 0.2 (abs $ rand))
 
@@ -131,7 +131,7 @@ hush
 
 -- F4 TO DS6!! -- ph -12 if needed
 let dascale = "melodicMajor"; chord = "'min"; melo = "0 4 6 3"; root = "f3 f4";
-in d1 $ slow 2 $ struct "t(<9 7 11 7>,16)" 
+in d1 $ slow 1 $ struct "t(16,16)" 
   $ every 2 (slow 2) $ n (scale dascale (melo) + root) # s "chord"
   # amp perlin
   # s "PISTON"
@@ -161,7 +161,7 @@ d1 $ struct "t(7, 16)" $ fast 2
 
 d2 $ struct "t(7, 16)" $ fast 2 
   $ n ("c6 . <~ f6*2> f6 . f7 f7 . [gs6|c6]@2" - 48)
-  # s "PISTON"
+  # s "FURTHRRR"
   # amp rand
   # nudge ((tri+rand) * 0.0002)
 
