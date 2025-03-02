@@ -1,4 +1,4 @@
-#N canvas 0 0 1920 1052 12;
+#N canvas 0 0 958 1050 12;
 #X obj 259 137 osc~;
 #X obj 259 161 +~ 1;
 #X obj 259 185 *~ 0.5;
@@ -18,8 +18,8 @@
 #X obj 400 330 *~;
 #X obj 421 302 inlet;
 #X obj 525 304 loadmess 1;
-#X text 374 83 0 input \; 1 lfo speed \; 2 depth \; 3 feedback \; 4
-wet \; 5 dry;
+#X text 374 83 0 input \; 1 lfo speed \; 2 depth \; 3 feedback \; 4 wet \; 5 dry;
+#X text 385 224 offset to escape in-phase;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
