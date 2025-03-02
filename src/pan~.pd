@@ -1,8 +1,7 @@
-#N canvas 765 117 672 533 12;
+#N canvas 0 0 1074 1050 12;
 #X obj 246 280 *~;
 #X obj 211 280 *~;
-#X obj 277 160 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3175 1;
+#X obj 277 160 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 274 183 t b f, f 6;
 #X msg 274 206 1;
 #X obj 274 229 -;
@@ -14,6 +13,7 @@
 #X obj 274 119 inlet;
 #X obj 275 333 outlet~;
 #X obj 323 96 inlet;
+#X text 83 87 0 \, mono in \; 1 \, L/R \; 2 \, center bang \;;
 #X connect 0 0 12 0;
 #X connect 1 0 10 0;
 #X connect 2 0 3 0;
