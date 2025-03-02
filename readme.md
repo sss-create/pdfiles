@@ -19,3 +19,4 @@ personal pd files containing sound and network patches. playground and resource 
 * pd_spectral_toolkit
 * bsaylor
 * convolve_tilde https://github.com/wbrent/convolve_tilde
+
