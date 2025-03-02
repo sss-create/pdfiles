@@ -1,4 +1,4 @@
-#N canvas 0 0 1246 1050 12;
+#N canvas 0 0 1182 1050 12;
 #X obj 53 195 osc~;
 #X obj 53 214 *~;
 #X obj 91 195 line~;
@@ -29,9 +29,7 @@
 #X obj 439 151 pack s f f;
 #X obj 401 99 * 4;
 #X obj 351 351 matrix~ 4 4 1;
-#X obj 351 267 else/knob 30 0 1 4 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X msg 351 306 0 0 \$1;
-#X obj 416 269 else/knob 30 0 1 4 0 empty empty #dfdfdf #7c7c7c black 1 0 0 0 1 320 0 0 0;
 #X msg 416 308 0 1 \$1;
 #X connect 0 0 1 0;
 #X connect 2 0 1 1;
@@ -65,7 +63,5 @@
 #X connect 26 0 27 2;
 #X connect 27 0 24 0;
 #X connect 28 0 23 0;
-#X connect 30 0 31 0;
+#X connect 30 0 29 0;
 #X connect 31 0 29 0;
-#X connect 32 0 33 0;
-#X connect 33 0 29 0;
