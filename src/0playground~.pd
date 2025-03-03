@@ -1,0 +1,11 @@
+#N canvas 0 0 1920 1052 12;
+#X obj 168 70 noise~;
+#X obj 237 108 freqshift~;
+#X obj 166 199 dac~;
+#X obj 168 109 *~ 0.5;
+#X connect 0 0 3 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
