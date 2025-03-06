@@ -1,4 +1,4 @@
-#N canvas 0 0 1140 1050 10;
+#N canvas 0 0 1920 1052 10;
 #X obj 64 106 inlet~;
 #X obj 64 163 allpass100ms~;
 #X obj 64 213 allpass100ms~;
@@ -25,14 +25,12 @@
 #X obj 321 382 %~ 1;
 #X obj 296 342 %~ 1;
 #X obj 249 294 %~ 1;
-#X obj 213 258 %~ 1;
+#X obj 211 258 %~ 1;
 #X obj 169 219 %~ 1;
 #X obj 259 117 inlet~;
 #X obj 259 145 *~;
-#X obj 343 152 loadbang;
-#X obj 343 188 sig~;
-#X msg 343 170 5;
-#X obj 327 114 inlet~;
+#X obj 332 80 inlet~;
+#X text 381 248 todo: clicks;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -74,7 +72,4 @@
 #X connect 29 0 16 0;
 #X connect 29 0 17 0;
 #X connect 29 0 1 1;
-#X connect 30 0 32 0;
-#X connect 31 0 29 1;
-#X connect 32 0 31 0;
-#X connect 33 0 29 1;
+#X connect 30 0 29 1;
