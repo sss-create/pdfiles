@@ -1,4 +1,4 @@
-#N canvas 0 0 1920 1052 10;
+#N canvas 0 0 960 1050 10;
 #X obj 0 0 cnv 15 400 160 empty empty ERBE 20 12 0 14 #0483ff #ffffff 0;
 #X obj 125 387 *~;
 #X obj 278 390 *~;
