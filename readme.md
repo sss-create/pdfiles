@@ -18,7 +18,7 @@ personal pd files containing sound and network patches. playground and resource 
 ## interesting externals
 * pd_spectral_toolkit
 * bsaylor
-* 0convolve_tilde](https://github.com/wbrent/convolve_tilde)
+* [convolve_tilde](https://github.com/wbrent/convolve_tilde)
 
-* valve (https://www.kvraudio.com/forum/viewtopic.php?t=465091)
+* [valve](https://www.kvraudio.com/forum/viewtopic.php?t=465091)
  -- valve  y = tanh( x + m * tanh( x * x * x * x * x ));
