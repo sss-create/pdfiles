@@ -30,6 +30,7 @@
 #X text 47 10 0 audio \; 1 lfo speed \; 2 time left \; 3 time rigth \; 4 feedback;
 #X obj 352 74 inlet;
 #X obj 409 75 inlet;
+#X text 237 36 todo: block in subpatch \;;
 #X connect 0 0 12 0;
 #X connect 1 0 4 1;
 #X connect 2 0 3 0;
