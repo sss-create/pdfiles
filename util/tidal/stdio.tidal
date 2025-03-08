@@ -11,7 +11,7 @@ d2 $ n "a5 a4!3"
   # amp 1
   # s "furthrrrr"
 
-d3 $ fast 2 $ s "cp bd"
+d3 $ fast 2 $ s "cp bd bd cp"
   # n "2 9 777 99"
   # cv1 "99 77"
   # cv2 (irand 99)
