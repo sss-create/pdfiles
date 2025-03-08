@@ -1,0 +1,18 @@
+#N canvas 0 0 967 1050 12;
+#X msg 40 46 listen 9003;
+#X obj 40 73 netreceive -u -b;
+#X obj 40 29 loadbang;
+#X obj 40 100 oscparse;
+#X obj 40 119 list trim;
+#X obj 183 113 inlet;
+#X obj 144 135 spigot;
+#X obj 40 154 outlet;
+#X obj 144 159 print rcv;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 8 0;

@@ -1,4 +1,4 @@
-#N canvas 0 0 1477 1050 12;
+#N canvas 0 0 1016 1050 12;
 #X obj 58 104 *~;
 #X obj 76 56 bng 15 250 50 0 empty empty empty 0 -8 0 12 #fcfcfc #000000 #000000;
 #X floatatom 139 58 5 0 0 0 - - - 0;
@@ -154,7 +154,17 @@
 #X floatatom 730 429 5 0 0 0 - - - 0;
 #X obj 171 117 * 2;
 #X obj 305 134 *~ 0.1;
+#X floatatom 756 357 5 0 0 0 - - - 0;
+#X floatatom 816 365 5 0 0 0 - - - 0;
+#X obj 58 123;
+#X floatatom 916 359 5 0 0 0 - - - 0;
+#X floatatom 976 367 5 0 0 0 - - - 0;
+#X obj 756 338 sq.tidal cp;
+#X obj 916 340 sq.tidal bd;
+#X obj 905 146 ../util/oscreceive;
+#X obj 905 126 tgl 15 0 empty empty empty 0 -8 0 12 #fcfcfc #000000 #000000 0 1;
 #X connect 0 0 10 0;
+#X connect 0 0 120 0;
 #X connect 1 0 43 0;
 #X connect 1 0 57 0;
 #X connect 1 0 102 0;
@@ -285,3 +295,10 @@
 #X connect 115 0 113 1;
 #X connect 116 0 94 0;
 #X connect 117 0 45 0;
+#X connect 123 0 118 0;
+#X connect 123 1 119 0;
+#X connect 124 0 121 0;
+#X connect 124 1 122 0;
+#X connect 125 0 123 0;
+#X connect 125 0 124 0;
+#X connect 126 0 125 0;

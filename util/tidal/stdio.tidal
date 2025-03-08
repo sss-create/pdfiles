@@ -11,9 +11,12 @@ d2 $ n "a5 a4!3"
   # amp 1
   # s "furthrrrr"
 
-d3 $ n "a5 a4!3"
-  # amp 1
-  # s "juju"
+d3 $ fast 2 $ s "cp bd"
+  # n "2 9 777 99"
+  # cv1 "99 77"
+  # cv2 (irand 99)
+  # cv3 (irand 9)
+  # cv4 rand
 
 hush
 
