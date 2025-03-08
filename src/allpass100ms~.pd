@@ -1,4 +1,4 @@
-#N canvas 0 0 958 1050 10;
+#N canvas 0 0 1920 1052 10;
 #X obj 32 199 delwrite~ \$0-short 100;
 #X text 40 218 0 - 100 mSec allpass;
 #X obj 37 29 inlet~;
